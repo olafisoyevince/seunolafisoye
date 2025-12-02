@@ -48,7 +48,7 @@ export const Hero = () => {
         <section
             id="home"
             ref={containerRef}
-            className="min-h-screen flex flex-col justify-center px-6 md:px-12 relative z-10 pt-32"
+            className="min-h-screen flex flex-col justify-center relative z-10 pt-32 px-6 max-w-360 mx-auto"
         >
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-start mx-auto w-full">
                 {/* Left Side - Headline */}
