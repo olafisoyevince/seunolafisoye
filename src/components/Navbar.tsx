@@ -55,8 +55,10 @@ export const Navbar = () => {
 
     return (
         <>
-            <nav className="fixed top-0 left-0 w-full z-50 px-6 py-6 flex justify-between items-center text-white mix-blend-difference backdrop-blur-md border-b border-white/10">
-                {/* Left Side */}
+            <header className="fixed top-0 left-0 w-full z-50">
+                <div className="absolute inset-0 backdrop-blur-md" />
+                <nav className="relative px-6 py-6 flex justify-between items-center text-white mix-blend-difference border-b border-white/10">
+                    {/* Left Side */}
                 <div className="flex items-center gap-4 md:gap-8">
                     <div
                         onClick={(e) => handleScroll(e, "#home")}
@@ -115,6 +117,7 @@ export const Navbar = () => {
                     {isOpen ? <X size={24} /> : <Menu size={24} />}
                 </button>
             </nav>
+            </header>
 
             <div className="mobile-menu fixed top-0 right-0 w-full h-screen bg-white text-black flex flex-col justify-center items-center gap-8 transform translate-x-full md:hidden z-40">
                 <a

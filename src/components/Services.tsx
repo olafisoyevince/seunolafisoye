@@ -35,20 +35,23 @@ const services = [
 export const Services = () => {
     const containerRef = useRef<HTMLDivElement>(null);
 
-    useGSAP(() => {
-        gsap.from(".service-reveal", {
-            scrollTrigger: {
-                trigger: containerRef.current,
-                start: "top bottom-=100",
-                toggleActions: "play none none reverse",
-            },
-            y: 30,
-            opacity: 0,
-            duration: 1,
-            stagger: 0.1,
-            ease: "power3.out",
-        });
-    }, { scope: containerRef });
+    useGSAP(
+        () => {
+            gsap.from(".service-reveal", {
+                scrollTrigger: {
+                    trigger: containerRef.current,
+                    start: "top bottom-=100",
+                    toggleActions: "play none none reverse",
+                },
+                y: 30,
+                opacity: 0,
+                duration: 1,
+                stagger: 0.1,
+                ease: "power3.out",
+            });
+        },
+        { scope: containerRef }
+    );
 
     return (
         <section
@@ -67,7 +70,7 @@ export const Services = () => {
                 {/* Right Content */}
                 <div className="lg:col-span-9">
                     <h2 className="service-reveal text-3xl md:text-5xl lg:text-6xl font-heading font-medium leading-tight mb-24 text-black">
-                        My journey has been defined by a passion
+                        My journey has been defined by a passion{" "}
                         <br className="hidden lg:block" />
                         for creating exceptional{" "}
                         <span className="text-muted-foreground">
