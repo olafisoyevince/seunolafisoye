@@ -47,20 +47,23 @@ const projects = [
 export const Projects = () => {
     const containerRef = useRef<HTMLDivElement>(null);
 
-    useGSAP(() => {
-        gsap.from(".project-reveal", {
-            scrollTrigger: {
-                trigger: containerRef.current,
-                start: "top bottom-=100",
-                toggleActions: "play none none reverse",
-            },
-            y: 30,
-            opacity: 0,
-            duration: 1,
-            stagger: 0.1,
-            ease: "power3.out",
-        });
-    }, { scope: containerRef });
+    useGSAP(
+        () => {
+            gsap.from(".project-reveal", {
+                scrollTrigger: {
+                    trigger: containerRef.current,
+                    start: "top bottom-=100",
+                    toggleActions: "play none none reverse",
+                },
+                y: 30,
+                opacity: 0,
+                duration: 1,
+                stagger: 0.1,
+                ease: "power3.out",
+            });
+        },
+        { scope: containerRef }
+    );
 
     return (
         <section
@@ -95,7 +98,7 @@ export const Projects = () => {
                                 {project.title}
                             </h3>
                             <div className="text-right">
-                                <span className="block text-sm font-mono mb-1 text-black">
+                                <span className="block text-sm font-sans mb-1 text-black">
                                     {project.year}
                                 </span>
                                 <span className="block text-sm text-muted-foreground font-sans">

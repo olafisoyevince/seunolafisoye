@@ -70,13 +70,11 @@ export const Services = () => {
                 {/* Right Content */}
                 <div className="lg:col-span-9">
                     <h2 className="service-reveal text-3xl md:text-5xl lg:text-6xl font-heading font-medium leading-tight mb-24 text-black">
-                        My journey has been defined by a passion{" "}
-                        <br className="hidden lg:block" />
-                        for creating exceptional{" "}
+                        My journey has been defined by a passion for creating
+                        exceptional{" "}
                         <span className="text-muted-foreground">
-                            digital experiences
+                            digital experiences{" "}
                         </span>
-                        <br className="hidden lg:block" />
                         <span className="text-muted-foreground">
                             and scalable solutions.
                         </span>

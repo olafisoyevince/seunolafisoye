@@ -70,7 +70,7 @@ export const Contact = () => {
                     </h2>
 
                     <a
-                        href="mailto:hello@seun.dev"
+                        href="mailto:olafisoyevincent@gmail.com"
                         className="contact-reveal inline-flex items-center gap-2 bg-white text-black px-8 py-4 rounded-full font-sans font-medium hover:bg-gray-200 transition-colors"
                     >
                         Get in touch <ArrowRight size={20} />
@@ -80,19 +80,29 @@ export const Contact = () => {
                 {/* Footer Bottom */}
                 <div className="contact-reveal mt-32 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/60 font-sans">
                     <div className="flex items-center gap-2">
-                        <div
-                            className="flex flex-col items-center justify-center gap-4 group cursor-pointer hover:opacity-80"
-                            // title={"x"}
+                        <a
+                            href="https://x.com/fisoyeseun_"
+                            target="_blank"
+                            rel="noopener noreferrer"
                         >
-                            <div className="w-3 h-3 relative flex items-center justify-center">
-                                <img
-                                    src={"https://cdn.simpleicons.org/x/FFFFFF"}
-                                    alt={"x"}
-                                    className="w-full h-full object-contain"
-                                />
+                            <div className="flex flex-col items-center justify-center gap-4 group cursor-pointer hover:opacity-80">
+                                <div className="w-3 h-3 relative flex items-center justify-center">
+                                    <img
+                                        src={
+                                            "https://cdn.simpleicons.org/x/FFFFFF"
+                                        }
+                                        alt={"x"}
+                                        className="w-full h-full object-contain"
+                                    />
+                                </div>
                             </div>
-                        </div>{" "}
-                        <a href="#" className="text-white hover:opacity-80">
+                        </a>{" "}
+                        <a
+                            href="https://linkedin.com/in/oluwaseun-olafisoye"
+                            className="text-white hover:opacity-80"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             <Linkedin size={16} fill="currentColor" />
                         </a>
                     </div>

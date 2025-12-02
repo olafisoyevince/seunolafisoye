@@ -55,69 +55,66 @@ export const Navbar = () => {
 
     return (
         <>
-            <header className="fixed top-0 left-0 w-full z-50">
-                <div className="absolute inset-0 backdrop-blur-md" />
-                <nav className="relative px-6 py-6 flex justify-between items-center text-white mix-blend-difference border-b border-white/10">
-                    {/* Left Side */}
-                    <div className="flex items-center gap-4 md:gap-8">
-                        <div
-                            onClick={(e) => handleScroll(e, "#home")}
-                            className="text-2xl font-heading font-bold tracking-tighter cursor-pointer"
-                        >
-                            SEUN.
-                        </div>
-
-                        <div className="hidden md:flex items-center gap-3">
-                            <div className="bg-white/5 backdrop-blur-sm px-4 py-2 rounded-full text-xs font-sans text-white/80 border border-white/10">
-                                <span className="text-white font-medium">
-                                    Open to work
-                                </span>
-                            </div>
-                            <div className="bg-white/5 backdrop-blur-sm px-4 py-2 rounded-full text-xs font-sans text-white/80 border border-white/10 flex items-center gap-2">
-                                {time} <Clock size={12} />
-                            </div>
-                        </div>
+            <nav className="fixed top-0 left-0 w-full z-50 px-6 py-6 flex justify-between items-center text-white mix-blend-difference">
+                {/* Left Side */}
+                <div className="flex items-center gap-4 md:gap-8">
+                    <div
+                        onClick={(e) => handleScroll(e, "#home")}
+                        className="text-2xl font-heading font-bold tracking-tighter cursor-pointer"
+                    >
+                        SEUN.
                     </div>
 
-                    {/* Right Side */}
-                    <div className="hidden md:flex items-center gap-8">
-                        <div className="flex gap-8 text-sm font-sans font-medium tracking-wide">
-                            <a
-                                href="#about"
-                                onClick={(e) => handleScroll(e, "#about")}
-                                className="hover:text-white/70 transition-colors"
-                            >
-                                About
-                            </a>
-                            <a
-                                href="#work"
-                                onClick={(e) => handleScroll(e, "#work")}
-                                className="hover:text-white/70 transition-colors"
-                            >
-                                Work
-                            </a>
-                            <a
-                                href="#services"
-                                onClick={(e) => handleScroll(e, "#services")}
-                                className="hover:text-white/70 transition-colors"
-                            >
-                                Services
-                            </a>
+                    <div className="hidden md:flex items-center gap-3">
+                        <div className="px-4 py-2 rounded-full text-xs font-sans border border-white/10">
+                            <span className="text-white font-medium">
+                                Open to work
+                            </span>
                         </div>
+                        <div className="px-4 py-2 rounded-full text-xs font-sans  border border-white/10 flex items-center gap-2">
+                            {time} <Clock size={12} />
+                        </div>
+                    </div>
+                </div>
+
+                {/* Right Side */}
+                <div className="hidden md:flex items-center gap-8">
+                    <div className="flex gap-8 text-sm font-sans font-medium tracking-wide">
                         <a
-                            href="#contact"
-                            onClick={(e) => handleScroll(e, "#contact")}
-                            className="bg-white text-black px-6 py-2.5 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors"
+                            href="#about"
+                            onClick={(e) => handleScroll(e, "#about")}
+                            className="hover:text-white/70 transition-colors"
                         >
-                            Contact
+                            About
+                        </a>
+                        <a
+                            href="#work"
+                            onClick={(e) => handleScroll(e, "#work")}
+                            className="hover:text-white/70 transition-colors"
+                        >
+                            Work
+                        </a>
+                        <a
+                            href="#services"
+                            onClick={(e) => handleScroll(e, "#services")}
+                            className="hover:text-white/70 transition-colors"
+                        >
+                            Services
                         </a>
                     </div>
+                    <a
+                        href="#contact"
+                        onClick={(e) => handleScroll(e, "#contact")}
+                        className="bg-white text-black px-6 py-2.5 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors"
+                    >
+                        Contact
+                    </a>
+                </div>
 
-                    <button onClick={toggleMenu} className="md:hidden z-50">
-                        {isOpen ? <X size={24} /> : <Menu size={24} />}
-                    </button>
-                </nav>
-            </header>
+                <button onClick={toggleMenu} className="md:hidden z-50">
+                    {isOpen ? <X size={24} /> : <Menu size={24} />}
+                </button>
+            </nav>
 
             <div className="mobile-menu fixed top-0 right-0 w-full h-screen bg-white text-black flex flex-col justify-center items-center gap-8 transform translate-x-full md:hidden z-40">
                 <a
