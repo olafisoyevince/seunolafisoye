@@ -59,64 +59,64 @@ export const Navbar = () => {
                 <div className="absolute inset-0 backdrop-blur-md" />
                 <nav className="relative px-6 py-6 flex justify-between items-center text-white mix-blend-difference border-b border-white/10">
                     {/* Left Side */}
-                <div className="flex items-center gap-4 md:gap-8">
-                    <div
-                        onClick={(e) => handleScroll(e, "#home")}
-                        className="text-2xl font-heading font-bold tracking-tighter cursor-pointer"
-                    >
-                        SEUN.
-                    </div>
-
-                    <div className="hidden md:flex items-center gap-3">
-                        <div className="bg-white/5 backdrop-blur-sm px-4 py-2 rounded-full text-xs font-sans text-white/80 border border-white/10">
-                            <span className="text-white font-medium">
-                                Open to work
-                            </span>
+                    <div className="flex items-center gap-4 md:gap-8">
+                        <div
+                            onClick={(e) => handleScroll(e, "#home")}
+                            className="text-2xl font-heading font-bold tracking-tighter cursor-pointer"
+                        >
+                            SEUN.
                         </div>
-                        <div className="bg-white/5 backdrop-blur-sm px-4 py-2 rounded-full text-xs font-sans text-white/80 border border-white/10 flex items-center gap-2">
-                            {time} <Clock size={12} />
+
+                        <div className="hidden md:flex items-center gap-3">
+                            <div className="bg-white/5 backdrop-blur-sm px-4 py-2 rounded-full text-xs font-sans text-white/80 border border-white/10">
+                                <span className="text-white font-medium">
+                                    Open to work
+                                </span>
+                            </div>
+                            <div className="bg-white/5 backdrop-blur-sm px-4 py-2 rounded-full text-xs font-sans text-white/80 border border-white/10 flex items-center gap-2">
+                                {time} <Clock size={12} />
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                {/* Right Side */}
-                <div className="hidden md:flex items-center gap-8">
-                    <div className="flex gap-8 text-sm font-sans font-medium tracking-wide">
+                    {/* Right Side */}
+                    <div className="hidden md:flex items-center gap-8">
+                        <div className="flex gap-8 text-sm font-sans font-medium tracking-wide">
+                            <a
+                                href="#about"
+                                onClick={(e) => handleScroll(e, "#about")}
+                                className="hover:text-white/70 transition-colors"
+                            >
+                                About
+                            </a>
+                            <a
+                                href="#work"
+                                onClick={(e) => handleScroll(e, "#work")}
+                                className="hover:text-white/70 transition-colors"
+                            >
+                                Work
+                            </a>
+                            <a
+                                href="#services"
+                                onClick={(e) => handleScroll(e, "#services")}
+                                className="hover:text-white/70 transition-colors"
+                            >
+                                Services
+                            </a>
+                        </div>
                         <a
-                            href="#about"
-                            onClick={(e) => handleScroll(e, "#about")}
-                            className="hover:text-white/70 transition-colors"
+                            href="#contact"
+                            onClick={(e) => handleScroll(e, "#contact")}
+                            className="bg-white text-black px-6 py-2.5 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors"
                         >
-                            About
-                        </a>
-                        <a
-                            href="#work"
-                            onClick={(e) => handleScroll(e, "#work")}
-                            className="hover:text-white/70 transition-colors"
-                        >
-                            Work
-                        </a>
-                        <a
-                            href="#services"
-                            onClick={(e) => handleScroll(e, "#services")}
-                            className="hover:text-white/70 transition-colors"
-                        >
-                            Services
+                            Contact
                         </a>
                     </div>
-                    <a
-                        href="#contact"
-                        onClick={(e) => handleScroll(e, "#contact")}
-                        className="bg-white text-black px-6 py-2.5 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors"
-                    >
-                        Contact
-                    </a>
-                </div>
 
-                <button onClick={toggleMenu} className="md:hidden z-50">
-                    {isOpen ? <X size={24} /> : <Menu size={24} />}
-                </button>
-            </nav>
+                    <button onClick={toggleMenu} className="md:hidden z-50">
+                        {isOpen ? <X size={24} /> : <Menu size={24} />}
+                    </button>
+                </nav>
             </header>
 
             <div className="mobile-menu fixed top-0 right-0 w-full h-screen bg-white text-black flex flex-col justify-center items-center gap-8 transform translate-x-full md:hidden z-40">
