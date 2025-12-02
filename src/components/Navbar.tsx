@@ -147,14 +147,12 @@ export const Navbar = () => {
                 </a>
 
                 <div className="flex flex-col items-center gap-4 mt-8">
-                    <div className="bg-black/5 backdrop-blur-sm px-4 py-2 rounded-full text-xs font-sans text-black/80 border border-black/10">
+                    <div className=" px-4 py-2 rounded-full text-xs font-sans border border-black/10">
                         <span className="text-black font-medium">
                             Open to work
-                        </span>{" "}
-                        <span className="opacity-50 mx-1">/</span> Booking for
-                        February
+                        </span>
                     </div>
-                    <div className="bg-black/5 backdrop-blur-sm px-4 py-2 rounded-full text-xs font-sans text-black/80 border border-black/10 flex items-center gap-2">
+                    <div className=" px-4 py-2 rounded-full text-xs font-sans border border-black/10 flex items-center gap-2">
                         {time} <Clock size={12} />
                     </div>
                 </div>
