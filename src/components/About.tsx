@@ -8,20 +8,23 @@ gsap.registerPlugin(ScrollTrigger);
 export const About = () => {
     const containerRef = useRef<HTMLDivElement>(null);
 
-    useGSAP(() => {
-        gsap.from(".about-reveal", {
-            scrollTrigger: {
-                trigger: containerRef.current,
-                start: "top bottom-=100",
-                toggleActions: "play none none reverse",
-            },
-            y: 30,
-            opacity: 0,
-            duration: 1,
-            stagger: 0.1,
-            ease: "power3.out",
-        });
-    }, { scope: containerRef });
+    useGSAP(
+        () => {
+            gsap.from(".about-reveal", {
+                scrollTrigger: {
+                    trigger: containerRef.current,
+                    start: "top bottom-=100",
+                    toggleActions: "play none none reverse",
+                },
+                y: 30,
+                opacity: 0,
+                duration: 1,
+                stagger: 0.1,
+                ease: "power3.out",
+            });
+        },
+        { scope: containerRef }
+    );
 
     return (
         <section
@@ -55,15 +58,15 @@ export const About = () => {
                             "Engineering is about solving problems with
                             creativity. I craft user-focused digital
                             experiences. Building meaningful products is a
-                            privilege — and I'm passionate about meaningful
-                            design."
+                            privilege — and I'm passionate about bringing
+                            meaningful user experiences to life."
                         </p>
 
                         <div className="flex items-center gap-4">
                             <img
-                                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=faces"
+                                src="/me.jpg"
                                 alt="Seun"
-                                className="w-12 h-12 rounded-xl object-cover grayscale"
+                                className="w-12 h-12 rounded-xl object-cover"
                             />
                             <div>
                                 <div className="flex items-center gap-2 mb-1">
