@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import Lenis from "lenis";
-import { Background } from "./components/Background";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { About } from "./components/About";
@@ -34,7 +33,6 @@ function App() {
 
     return (
         <main className="relative min-h-screen w-full overflow-hidden text-foreground selection:bg-primary selection:text-primary-foreground">
-            <Background />
             <Navbar />
             <Hero />
             <Projects />

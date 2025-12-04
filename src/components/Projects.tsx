@@ -2,45 +2,82 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
     {
         title: "Vaultpay",
+        client: "Vault Inc",
+        clientLogo: "https://cdn.simpleicons.org/baremetrics/6078FF",
         category: "Product Design",
-        image: "https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2700&auto=format&fit=crop",
+        projectImage:
+            "https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2700&auto=format&fit=crop",
         year: "2024",
+        description:
+            "A secure and intuitive digital wallet for managing your finances with ease.",
+        aspect: "aspect-[4/3]",
     },
     {
         title: "Greene",
+        client: "EcoLife",
+        clientLogo: "https://cdn.simpleicons.org/beatsbydre/E01F3D",
         category: "Graphic Design",
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2670&auto=format&fit=crop",
+        projectImage:
+            "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2670&auto=format&fit=crop",
         year: "2025",
+        description:
+            "Sustainable brand identity design for an eco-friendly lifestyle startup.",
+        aspect: "aspect-[3/4]",
     },
     {
         title: "Gamestats",
+        client: "ProGaming",
+        clientLogo: "https://cdn.simpleicons.org/coronarenderer/E6502A",
         category: "Product Design",
-        image: "https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?q=80&w=2670&auto=format&fit=crop",
+        projectImage:
+            "https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?q=80&w=2670&auto=format&fit=crop",
         year: "2025",
+        description:
+            "Real-time analytics dashboard for professional gamers and esports teams.",
+        aspect: "aspect-square",
     },
     {
         title: "Lumina",
+        client: "LightHouse",
+        clientLogo: "https://cdn.simpleicons.org/decapcms/FF0082",
         category: "Brand Identity",
-        image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop",
+        projectImage:
+            "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop",
         year: "2022",
+        description:
+            "Modern lighting solutions brand focused on minimalist aesthetics.",
+        aspect: "aspect-[16/9]",
     },
     {
         title: "Brutal",
+        client: "Artistry",
+        clientLogo: "https://cdn.simpleicons.org/ericsson/0082F0",
         category: "Web Design",
-        image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2670&auto=format&fit=crop",
+        projectImage:
+            "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2670&auto=format&fit=crop",
         year: "2023",
+        description:
+            "Experimental brutalist web design portfolio for a creative agency.",
+        aspect: "aspect-[3/4]",
     },
     {
         title: "Flow",
+        client: "Focus",
+        clientLogo: "https://cdn.simpleicons.org/fathom/9187FF",
         category: "Development",
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop",
+        projectImage:
+            "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop",
         year: "2023",
+        description:
+            "Productivity application designed to help you stay in the flow state.",
+        aspect: "aspect-[4/5]",
     },
 ];
 
@@ -80,31 +117,57 @@ export const Projects = () => {
                 </span>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+            <div className="columns-1 md:columns-2 lg:columns-3 gap-4">
                 {projects.map((project, index) => (
                     <div
                         key={index}
-                        className="project-reveal group cursor-pointer"
+                        className="project-reveal group cursor-pointer break-inside-avoid bg-black p-2 rounded-[28px] text-white mb-4"
                     >
-                        <div className="overflow-hidden rounded-2xl mb-6 relative aspect-4/3">
+                        <div
+                            className={`overflow-hidden rounded-[20px] mb-6 relative ${project.aspect}`}
+                        >
                             <img
-                                src={project.image}
+                                src={project.projectImage}
                                 alt={project.title}
                                 className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
                             />
                         </div>
-                        <div className="flex justify-between items-start">
-                            <h3 className="text-2xl font-sans font-medium group-hover:text-primary transition-colors">
-                                {project.title}
-                            </h3>
-                            <div className="text-right">
-                                <span className="block text-sm font-sans mb-1 text-black">
-                                    {project.year}
-                                </span>
-                                <span className="block text-sm text-muted-foreground font-sans">
-                                    {project.category}
-                                </span>
+
+                        <div className="px-2 mb-2">
+                            <div className="flex justify-between items-start mb-4">
+                                <div>
+                                    <h3 className="text-2xl font-sans font-medium group-hover:text-gray-300 transition-colors mb-2">
+                                        {project.title}
+                                    </h3>
+                                    <div className="flex items-center gap-2">
+                                        <span className="text-xs text-gray-500 font-sans uppercase">
+                                            For
+                                        </span>
+                                        <Avatar className="size-10 border border-white/10">
+                                            <AvatarImage
+                                                src={project.clientLogo}
+                                                alt={project.client}
+                                            />
+                                            <AvatarFallback className="text-[10px] text-black font-sans">
+                                                {project.client
+                                                    .substring(0, 2)
+                                                    .toUpperCase()}
+                                            </AvatarFallback>
+                                        </Avatar>
+                                    </div>
+                                </div>
+                                <div className="text-right">
+                                    <span className="block text-sm font-sans mb-1 text-white">
+                                        {project.year}
+                                    </span>
+                                    <span className="block text-sm text-gray-400 font-sans">
+                                        {project.category}
+                                    </span>
+                                </div>
                             </div>
+                            <p className="text-gray-400 text-sm font-sans leading-relaxed">
+                                {project.description}
+                            </p>
                         </div>
                     </div>
                 ))}
