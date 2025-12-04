@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+import { cn } from "../lib/utils";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,7 +18,7 @@ const projects = [
         year: "2024",
         description:
             "A secure and intuitive digital wallet for managing your finances with ease.",
-        aspect: "aspect-[4/3]",
+        className: "md:col-span-2",
     },
     {
         title: "Greene",
@@ -29,7 +30,7 @@ const projects = [
         year: "2025",
         description:
             "Sustainable brand identity design for an eco-friendly lifestyle startup.",
-        aspect: "aspect-[3/4]",
+        className: "md:row-span-2",
     },
     {
         title: "Gamestats",
@@ -41,7 +42,7 @@ const projects = [
         year: "2025",
         description:
             "Real-time analytics dashboard for professional gamers and esports teams.",
-        aspect: "aspect-square",
+        className: "md:col-span-1",
     },
     {
         title: "Lumina",
@@ -53,7 +54,7 @@ const projects = [
         year: "2022",
         description:
             "Modern lighting solutions brand focused on minimalist aesthetics.",
-        aspect: "aspect-[16/9]",
+        className: "md:col-span-1",
     },
     {
         title: "Brutal",
@@ -65,7 +66,7 @@ const projects = [
         year: "2023",
         description:
             "Experimental brutalist web design portfolio for a creative agency.",
-        aspect: "aspect-[3/4]",
+        className: "md:col-span-2",
     },
     {
         title: "Flow",
@@ -77,7 +78,7 @@ const projects = [
         year: "2023",
         description:
             "Productivity application designed to help you stay in the flow state.",
-        aspect: "aspect-[4/5]",
+        className: "md:col-span-1",
     },
 ];
 
@@ -117,15 +118,16 @@ export const Projects = () => {
                 </span>
             </div>
 
-            <div className="columns-1 md:columns-2 lg:columns-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[400px]">
                 {projects.map((project, index) => (
                     <div
                         key={index}
-                        className="project-reveal group cursor-pointer break-inside-avoid bg-black p-2 rounded-[28px] text-white mb-4"
+                        className={cn(
+                            "project-reveal group cursor-pointer bg-black p-2 rounded-[28px] text-white flex flex-col",
+                            project.className
+                        )}
                     >
-                        <div
-                            className={`overflow-hidden rounded-[20px] mb-6 relative ${project.aspect}`}
-                        >
+                        <div className="overflow-hidden rounded-[20px] mb-2 relative flex-1">
                             <img
                                 src={project.projectImage}
                                 alt={project.title}

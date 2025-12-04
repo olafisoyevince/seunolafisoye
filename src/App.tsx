@@ -3,7 +3,7 @@ import Lenis from "lenis";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { About } from "./components/About";
-import { Services } from "./components/Services";
+import { Experiences } from "./components/Experiences";
 import { Tools } from "./components/Tools";
 import { Projects } from "./components/Projects";
 import { Blogs } from "./components/Blogs";
@@ -37,7 +37,7 @@ function App() {
             <Hero />
             <Projects />
             <About />
-            <Services />
+            <Experiences />
             <Tools />
             <Blogs />
             <Contact />

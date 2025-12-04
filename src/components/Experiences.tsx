@@ -5,34 +5,39 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const services = [
+const experiences = [
     {
         title: "Senior Frontend Engineer",
-        items: [
-            "Turing Tower",
-            "April 2024 - Present",
-            "Building immersive web experiences for various clients using React, WebGL, and GSAP.",
-        ],
+        company: "Turing Tower",
+        period: "April 2024 - Present",
+        description:
+            "Directed development of enterprise and healthcare web applications, improving operational efficiency and contributing to revenue growth.",
     },
+    {
+        title: "Software Engineer",
+        company: "Freelance",
+        period: "September 2023 - Present",
+        description:
+            "Built landing pages and web apps for small businesses, wrote technical articles, and taught frontend engineering to 20+ students.",
+    },
+    {
+        title: "Information Security, Service Desk Officer",
+        company: "Septagus Consulting / Sterling Bank Plc",
+        period: "June 2023 - September 2023",
+        description:
+            "Supported cybersecurity research, incident response, and IT operations while contributing to security compliance.",
+    },
+
     {
         title: "Frontend Developer",
-        items: [
-            "Tech Studio",
-            "2021 - 2023",
-            "Collaborated with designers to implement pixel-perfect UIs and complex animations.",
-        ],
-    },
-    {
-        title: "Junior Developer",
-        items: [
-            "Creative Agency",
-            "2020 - 2021",
-            "Assisted in the development of award-winning marketing websites and campaigns.",
-        ],
+        company: "Zero & One Technologies Ltd",
+        period: "May 2022 - June 2023",
+        description:
+            "Developed a large-scale election results visualization app, created reusable UI components, and mentored interns.",
     },
 ];
 
-export const Services = () => {
+export const Experiences = () => {
     const containerRef = useRef<HTMLDivElement>(null);
 
     useGSAP(
@@ -81,28 +86,27 @@ export const Services = () => {
                     </h2>
 
                     <div className="space-y-16">
-                        {services.map((service, index) => (
+                        {experiences.map((experience, index) => (
                             <div
                                 key={index}
-                                className="service-reveal border-t border-black/10 pt-12 flex flex-col md:flex-row justify-between gap-8 group hover:border-black/30 transition-colors"
+                                className="service-reveal border-t border-black/10 pt-12 flex flex-col md:flex-row justify-between gap-4 md:gap-8 group hover:border-black/30 transition-colors"
                             >
-                                <div className="flex items-center gap-4">
+                                <div className="flex items-center gap-4 md:w-1/2">
                                     <h3 className="text-2xl font-sans font-medium">
-                                        {service.title}
+                                        {experience.title}
                                     </h3>
                                 </div>
 
-                                <div className="md:w-1/3">
-                                    <ul className="space-y-2">
-                                        {service.items.map((item, i) => (
-                                            <li
-                                                key={i}
-                                                className="text-muted-foreground font-sans text-sm md:text-base"
-                                            >
-                                                {item}
-                                            </li>
-                                        ))}
-                                    </ul>
+                                <div className="md:w-1/2 flex flex-col gap-2">
+                                    <div className="text-lg font-semibold text-black">
+                                        {experience.company}
+                                    </div>
+                                    <div className="text-sm text-muted-foreground font-sans">
+                                        {experience.period}
+                                    </div>
+                                    <p className="text-muted-foreground font-sans text-sm md:text-base leading-relaxed">
+                                        {experience.description}
+                                    </p>
                                 </div>
                             </div>
                         ))}

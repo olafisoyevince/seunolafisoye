@@ -69,11 +69,11 @@ export const About = () => {
                                 className="w-12 h-12 rounded-xl object-cover"
                             />
                             <div>
-                                <div className="flex items-center gap-2 mb-1">
+                                <div className="flex flex-col items-start sm:flex-row sm:items-center gap-1 sm:gap-2 mb-1">
                                     <span className="font-heading font-bold text-lg">
                                         Oluwaseun
                                     </span>
-                                    <span className="bg-white/20 text-xs px-2 py-0.5 rounded text-white/80">
+                                    <span className="bg-white/20 text-xs px-2 py-0.5 rounded text-white/80 w-fit whitespace-nowrap">
                                         Frontend Engineer
                                     </span>
                                 </div>

@@ -8,48 +8,39 @@ gsap.registerPlugin(ScrollTrigger);
 
 const blogs = [
     {
-        title: "The Future of Web Design: Trends to Watch in 2025",
-        date: "Oct 12, 2024",
-        category: "Design",
-        link: "#",
-    },
-    {
-        title: "Mastering React Server Components",
-        date: "Sep 28, 2024",
+        title: "Redux: in my own words",
+        date: "Aug 2, 2023",
         category: "Development",
-        link: "#",
+        link: "https://dev.to/seunolafisoye/redux-in-my-own-words-65c",
     },
     {
-        title: "Building Accessible User Interfaces",
-        date: "Aug 15, 2024",
-        category: "Accessibility",
-        link: "#",
-    },
-    {
-        title: "Why Micro-interactions Matter",
-        date: "Jul 03, 2024",
-        category: "UX Design",
-        link: "#",
+        title: "Tips on Responsiveness",
+        date: "Jul 12, 2023",
+        category: "Development",
+        link: "https://dev.to/seunolafisoye/tips-on-responsiveness-2hj8",
     },
 ];
 
 export const Blogs = () => {
     const containerRef = useRef<HTMLDivElement>(null);
 
-    useGSAP(() => {
-        gsap.from(".blog-reveal", {
-            scrollTrigger: {
-                trigger: containerRef.current,
-                start: "top bottom-=100",
-                toggleActions: "play none none reverse",
-            },
-            y: 30,
-            opacity: 0,
-            duration: 1,
-            stagger: 0.1,
-            ease: "power3.out",
-        });
-    }, { scope: containerRef });
+    useGSAP(
+        () => {
+            gsap.from(".blog-reveal", {
+                scrollTrigger: {
+                    trigger: containerRef.current,
+                    start: "top bottom-=100",
+                    toggleActions: "play none none reverse",
+                },
+                y: 30,
+                opacity: 0,
+                duration: 1,
+                stagger: 0.1,
+                ease: "power3.out",
+            });
+        },
+        { scope: containerRef }
+    );
 
     return (
         <section
