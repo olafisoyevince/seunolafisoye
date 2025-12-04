@@ -2,6 +2,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { CVButton } from "./CVButton";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -84,6 +85,13 @@ export const Experiences = () => {
                             and scalable solutions.
                         </span>
                     </h2>
+
+                    <div className="service-reveal mb-16">
+                        <CVButton
+                            className="bg-black text-white px-6 py-3 rounded-full hover:bg-black/80"
+                            text="View Full Resume"
+                        />
+                    </div>
 
                     <div className="space-y-16">
                         {experiences.map((experience, index) => (

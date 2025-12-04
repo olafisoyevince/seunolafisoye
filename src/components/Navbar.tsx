@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, X, Clock } from "lucide-react";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { CVButton } from "./CVButton";
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -74,6 +75,7 @@ export const Navbar = () => {
                         <div className="px-4 py-2 rounded-full text-xs font-sans  border border-white/10 flex items-center gap-2">
                             {time} <Clock size={12} />
                         </div>
+                        <CVButton className="px-4 py-2 rounded-full text-xs font-sans border border-white/10 text-white hover:bg-white/10" />
                     </div>
                 </div>
 
@@ -155,6 +157,7 @@ export const Navbar = () => {
                     <div className=" px-4 py-2 rounded-full text-xs font-sans border border-black/10 flex items-center gap-2">
                         {time} <Clock size={12} />
                     </div>
+                    <CVButton className="px-4 py-2 rounded-full text-xs font-sans border border-black/10 text-black hover:bg-black/5" />
                 </div>
             </div>
         </>

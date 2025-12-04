@@ -2,7 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ArrowRight, Linkedin } from "lucide-react";
+import { ArrowRight, FileText, Linkedin } from "lucide-react";
+import { CVButton } from "./CVButton";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -69,12 +70,31 @@ export const Contact = () => {
                         product better!
                     </h2>
 
-                    <a
-                        href="mailto:olafisoyevincent@gmail.com"
-                        className="contact-reveal inline-flex items-center gap-2 bg-white text-black px-8 py-4 rounded-full font-sans font-medium hover:bg-gray-200 transition-colors"
-                    >
-                        Get in touch <ArrowRight size={20} />
-                    </a>
+                    <div className="flex flex-wrap gap-4">
+                        <a
+                            href="/Oluwaseun Olafisoye - Resume.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="contact-reveal group inline-flex items-center gap-2 border border-white/30 bg-white/5 px-8 py-4 rounded-full font-sans font-medium text-white backdrop-blur-sm transition-all duration-300 hover:bg-white hover:text-black hover:border-white"
+                        >
+                            Resume{" "}
+                            <FileText
+                                size={20}
+                                className="transition-transform duration-300 group-hover:scale-110"
+                            />
+                        </a>
+
+                        <a
+                            href="mailto:olafisoyevincent@gmail.com"
+                            className="contact-reveal group inline-flex items-center gap-2 bg-white text-black px-8 py-4 rounded-full font-sans font-medium transition-all duration-300 hover:bg-[#e6e6e6]"
+                        >
+                            Get in touch{" "}
+                            <ArrowRight
+                                size={20}
+                                className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                            />
+                        </a>
+                    </div>
                 </div>
 
                 {/* Footer Bottom */}
@@ -111,7 +131,13 @@ export const Contact = () => {
                         &copy; 2025 Oluwaseun Olafisoye
                     </div>
 
-                    <div>{date}</div>
+                    <div className="flex items-center gap-4">
+                        <CVButton
+                            className="text-white hover:text-white/80"
+                            showIcon={false}
+                        />
+                        <div>{date}</div>
+                    </div>
                 </div>
             </div>
         </section>
