@@ -9,6 +9,8 @@ import { Projects } from "./components/Projects";
 import { Blogs } from "./components/Blogs";
 import { Contact } from "./components/Contact";
 
+import { ThemeProvider } from "./components/theme-provider";
+
 function App() {
     useEffect(() => {
         const lenis = new Lenis({
@@ -32,16 +34,18 @@ function App() {
     }, []);
 
     return (
-        <main className="relative min-h-screen w-full overflow-hidden text-foreground selection:bg-primary selection:text-primary-foreground">
-            <Navbar />
-            <Hero />
-            <Projects />
-            <About />
-            <Experiences />
-            <Tools />
-            <Blogs />
-            <Contact />
-        </main>
+        <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+            <main className="relative min-h-screen w-full overflow-hidden text-foreground selection:bg-primary selection:text-primary-foreground">
+                <Navbar />
+                <Hero />
+                <Projects />
+                <About />
+                <Experiences />
+                <Tools />
+                <Blogs />
+                <Contact />
+            </main>
+        </ThemeProvider>
     );
 }
 export default App;

@@ -75,7 +75,7 @@ export const Experiences = () => {
 
                 {/* Right Content */}
                 <div className="lg:col-span-9">
-                    <h2 className="service-reveal text-3xl md:text-5xl lg:text-6xl font-heading font-medium leading-tight mb-24 text-black">
+                    <h2 className="service-reveal text-3xl md:text-5xl lg:text-6xl font-heading font-medium leading-tight mb-24 text-foreground">
                         My journey has been defined by a passion for creating
                         exceptional{" "}
                         <span className="text-muted-foreground">
@@ -88,7 +88,7 @@ export const Experiences = () => {
 
                     <div className="service-reveal mb-16">
                         <CVButton
-                            className="bg-black text-white px-6 py-3 rounded-full hover:bg-black/80"
+                            className="bg-primary text-primary-foreground px-6 py-3 rounded-full hover:bg-primary/90"
                             text="View Full Resume"
                         />
                     </div>
@@ -97,7 +97,7 @@ export const Experiences = () => {
                         {experiences.map((experience, index) => (
                             <div
                                 key={index}
-                                className="service-reveal border-t border-black/10 pt-12 flex flex-col md:flex-row justify-between gap-4 md:gap-8 group hover:border-black/30 transition-colors"
+                                className="service-reveal border-t border-border pt-12 flex flex-col md:flex-row justify-between gap-4 md:gap-8 group hover:border-foreground/30 transition-colors"
                             >
                                 <div className="flex items-center gap-4 md:w-1/2">
                                     <h3 className="text-2xl font-sans font-medium">
@@ -106,7 +106,7 @@ export const Experiences = () => {
                                 </div>
 
                                 <div className="md:w-1/2 flex flex-col gap-2">
-                                    <div className="text-lg font-semibold text-black">
+                                    <div className="text-lg font-semibold text-foreground">
                                         {experience.company}
                                     </div>
                                     <div className="text-sm text-muted-foreground font-sans">

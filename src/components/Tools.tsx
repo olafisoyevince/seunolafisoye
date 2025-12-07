@@ -45,20 +45,23 @@ const tools = [
 export const Tools = () => {
     const containerRef = useRef<HTMLDivElement>(null);
 
-    useGSAP(() => {
-        gsap.from(".tool-reveal", {
-            scrollTrigger: {
-                trigger: containerRef.current,
-                start: "top bottom-=100",
-                toggleActions: "play none none reverse",
-            },
-            y: 30,
-            opacity: 0,
-            duration: 1,
-            stagger: 0.05,
-            ease: "power3.out",
-        });
-    }, { scope: containerRef });
+    useGSAP(
+        () => {
+            gsap.from(".tool-reveal", {
+                scrollTrigger: {
+                    trigger: containerRef.current,
+                    start: "top bottom-=100",
+                    toggleActions: "play none none reverse",
+                },
+                y: 30,
+                opacity: 0,
+                duration: 1,
+                stagger: 0.05,
+                ease: "power3.out",
+            });
+        },
+        { scope: containerRef }
+    );
 
     return (
         <section
@@ -76,7 +79,7 @@ export const Tools = () => {
 
                 {/* Right Content */}
                 <div className="lg:col-span-9">
-                    <h2 className="tool-reveal text-3xl md:text-5xl lg:text-6xl font-heading font-medium leading-tight mb-24 text-black">
+                    <h2 className="tool-reveal text-3xl md:text-5xl lg:text-6xl font-heading font-medium leading-tight mb-24 text-foreground">
                         The tools I use to build
                         <br className="hidden lg:block" />
                         <span className="text-muted-foreground">
@@ -95,7 +98,11 @@ export const Tools = () => {
                                     <img
                                         src={tool.icon}
                                         alt={tool.name}
-                                        className="w-full h-full object-contain"
+                                        className={`w-full h-full object-contain ${
+                                            tool.icon.includes("000000")
+                                                ? "dark:invert"
+                                                : ""
+                                        }`}
                                     />
                                 </div>
                             </div>

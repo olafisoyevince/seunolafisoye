@@ -58,7 +58,7 @@ export const Blogs = () => {
 
                 {/* Right Content */}
                 <div className="lg:col-span-9">
-                    <h2 className="blog-reveal text-3xl md:text-5xl lg:text-6xl font-heading font-medium leading-tight mb-24 text-black">
+                    <h2 className="blog-reveal text-3xl md:text-5xl lg:text-6xl font-heading font-medium leading-tight mb-24 text-foreground">
                         Exploring the intersection of
                         <br className="hidden lg:block" />
                         design, technology,{" "}
@@ -74,7 +74,7 @@ export const Blogs = () => {
                             <a
                                 key={index}
                                 href={blog.link}
-                                className="blog-reveal block group border-t border-black/10 pt-8 hover:border-black/30 transition-colors"
+                                className="blog-reveal block group border-t border-border pt-8 hover:border-foreground/30 transition-colors"
                             >
                                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                                     <div className="md:w-2/3">
@@ -88,7 +88,7 @@ export const Blogs = () => {
                                         </div>
                                     </div>
                                     <div className="flex items-center justify-end">
-                                        <div className="w-12 h-12 rounded-full border border-black/10 flex items-center justify-center group-hover:bg-black group-hover:text-white transition-all duration-300">
+                                        <div className="w-12 h-12 rounded-full border border-border flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
                                             <ArrowUpRight size={20} />
                                         </div>
                                     </div>

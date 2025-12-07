@@ -3,6 +3,7 @@ import { Menu, X, Clock } from "lucide-react";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { CVButton } from "./CVButton";
+import { ModeToggle } from "./mode-toggle";
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -76,12 +77,13 @@ export const Navbar = () => {
                             {time} <Clock size={12} />
                         </div>
                         <CVButton className="px-4 py-2 rounded-full text-xs font-sans border border-white/10 text-white hover:bg-white/10" />
+                        <ModeToggle />
                     </div>
                 </div>
 
                 {/* Right Side */}
                 <div className="hidden md:flex items-center gap-8">
-                    <div className="flex gap-8 text-sm font-sans font-medium tracking-wide">
+                    <div className="flex gap-8 text-sm font-sans font-medium tracking-wide items-center">
                         <a
                             href="#about"
                             onClick={(e) => handleScroll(e, "#about")}
@@ -103,14 +105,15 @@ export const Navbar = () => {
                         >
                             Services
                         </a>
+
+                        <a
+                            href="#contact"
+                            onClick={(e) => handleScroll(e, "#contact")}
+                            className="hover:text-white/70 transition-colors"
+                        >
+                            Contact
+                        </a>
                     </div>
-                    <a
-                        href="#contact"
-                        onClick={(e) => handleScroll(e, "#contact")}
-                        className="bg-white text-black px-6 py-2.5 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors"
-                    >
-                        Contact
-                    </a>
                 </div>
 
                 <button onClick={toggleMenu} className="md:hidden z-50">
@@ -158,6 +161,9 @@ export const Navbar = () => {
                         {time} <Clock size={12} />
                     </div>
                     <CVButton className="px-4 py-2 rounded-full text-xs font-sans border border-black/10 text-black hover:bg-black/5" />
+                    <div className="text-black">
+                        <ModeToggle />
+                    </div>
                 </div>
             </div>
         </>

@@ -123,7 +123,7 @@ export const Projects = () => {
                     <div
                         key={index}
                         className={cn(
-                            "project-reveal group cursor-pointer bg-black p-2 rounded-[28px] text-white flex flex-col",
+                            "project-reveal group cursor-pointer bg-primary p-2 rounded-[28px] text-primary-foreground flex flex-col",
                             project.className
                         )}
                     >
@@ -138,19 +138,19 @@ export const Projects = () => {
                         <div className="px-2 mb-2">
                             <div className="flex justify-between items-start mb-4">
                                 <div>
-                                    <h3 className="text-2xl font-sans font-medium group-hover:text-gray-300 transition-colors mb-2">
+                                    <h3 className="text-2xl font-sans font-medium group-hover:text-muted-foreground transition-colors mb-2">
                                         {project.title}
                                     </h3>
                                     <div className="flex items-center gap-2">
-                                        <span className="text-xs text-gray-500 font-sans uppercase">
+                                        <span className="text-xs text-muted-foreground font-sans uppercase">
                                             For
                                         </span>
-                                        <Avatar className="size-10 border border-white/10">
+                                        <Avatar className="size-10 border border-primary-foreground/10">
                                             <AvatarImage
                                                 src={project.clientLogo}
                                                 alt={project.client}
                                             />
-                                            <AvatarFallback className="text-[10px] text-black font-sans">
+                                            <AvatarFallback className="text-[10px] text-primary font-sans">
                                                 {project.client
                                                     .substring(0, 2)
                                                     .toUpperCase()}
@@ -159,15 +159,15 @@ export const Projects = () => {
                                     </div>
                                 </div>
                                 <div className="text-right">
-                                    <span className="block text-sm font-sans mb-1 text-white">
+                                    <span className="block text-sm font-sans mb-1 text-primary-foreground">
                                         {project.year}
                                     </span>
-                                    <span className="block text-sm text-gray-400 font-sans">
+                                    <span className="block text-sm text-muted-foreground font-sans">
                                         {project.category}
                                     </span>
                                 </div>
                             </div>
-                            <p className="text-gray-400 text-sm font-sans leading-relaxed">
+                            <p className="text-muted-foreground text-sm font-sans leading-relaxed">
                                 {project.description}
                             </p>
                         </div>

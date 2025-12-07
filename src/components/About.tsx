@@ -2,6 +2,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -47,14 +48,14 @@ export const About = () => {
                             I'm a frontend engineer passionate about creating
                             user-focused digital solutions.
                         </span>{" "}
-                        <span className="text-black">
+                        <span className="text-foreground">
                             Whether it's a bold website or a detailed app
                             interface, I'm here to make your ideas shine.
                         </span>
                     </h2>
 
-                    <div className="about-reveal bg-black text-white p-8 md:p-12 rounded-4xl max-w-2xl shadow-2xl">
-                        <p className="text-lg md:text-xl font-sans leading-relaxed text-white/90 mb-12">
+                    <div className="about-reveal bg-primary text-primary-foreground p-8 md:p-12 rounded-4xl max-w-2xl shadow-2xl">
+                        <p className="text-lg md:text-xl font-sans leading-relaxed text-primary-foreground/90 mb-12">
                             "Engineering is about solving problems with
                             creativity. I craft user-focused digital
                             experiences. Building meaningful products is a
@@ -63,21 +64,25 @@ export const About = () => {
                         </p>
 
                         <div className="flex items-center gap-4">
-                            <img
-                                src="/me.jpg"
-                                alt="Seun"
-                                className="w-12 h-12 rounded-xl object-cover"
-                            />
+                            <Avatar className="w-14 h-14 border-2 border-primary">
+                                <AvatarImage
+                                    src="/me.jpg"
+                                    alt="Team member"
+                                    className="object-cover"
+                                />
+                                <AvatarFallback>ME</AvatarFallback>
+                            </Avatar>
+
                             <div>
                                 <div className="flex flex-col items-start sm:flex-row sm:items-center gap-1 sm:gap-2 mb-1">
                                     <span className="font-heading font-bold text-lg">
                                         Oluwaseun
                                     </span>
-                                    <span className="bg-white/20 text-xs px-2 py-0.5 rounded text-white/80 w-fit whitespace-nowrap">
+                                    <span className="bg-primary-foreground/20 text-xs px-2 py-0.5 rounded text-primary-foreground/80 w-fit whitespace-nowrap">
                                         Frontend Engineer
                                     </span>
                                 </div>
-                                <div className="text-sm text-white/60 font-sans">
+                                <div className="text-sm text-primary-foreground/60 font-sans">
                                     Based in United Kingdom
                                 </div>
                             </div>

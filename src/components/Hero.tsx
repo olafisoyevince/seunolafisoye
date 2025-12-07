@@ -55,14 +55,14 @@ export const Hero = () => {
                 <div className="lg:col-span-8">
                     <h1
                         ref={titleRef}
-                        className="text-5xl md:text-7xl lg:text-[5rem] font-heading font-semibold tracking-tight leading-[1.1] text-black mb-10"
+                        className="text-5xl md:text-7xl lg:text-[5rem] font-heading font-semibold tracking-tight leading-[1.1] text-foreground mb-10"
                     >
                         Hey! I{" "}
                         <span className="inline-flex -mb-2 md:-mb-4 mx-2">
                             <img
                                 src={"/me.jpg"}
                                 alt="Me"
-                                className="w-12 h-12 md:w-20 md:h-20 rounded-full object-cover border-2 border-black/10 rotate-3"
+                                className="w-12 h-12 md:w-20 md:h-20 rounded-full object-cover border-2 border-foreground/10 rotate-3"
                             />
                         </span>{" "}
                         build meaningful experiences that connect people and
@@ -72,7 +72,7 @@ export const Hero = () => {
                     <a
                         ref={buttonRef}
                         href="#contact"
-                        className="inline-flex items-center gap-3 bg-black text-white px-8 py-4 rounded-full font-sans font-medium text-lg hover:bg-gray-800 transition-all hover:scale-105"
+                        className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 rounded-full font-sans font-medium text-lg hover:bg-primary/90 transition-all hover:scale-105"
                     >
                         Get in touch <ArrowRight size={20} />
                     </a>
