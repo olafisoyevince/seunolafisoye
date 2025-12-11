@@ -34,7 +34,7 @@ function App() {
     }, []);
 
     return (
-        <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+        <ThemeProvider defaultTheme="dark" storageKey="portfolio-theme-toggle">
             <main className="relative min-h-screen w-full overflow-hidden text-foreground selection:bg-primary selection:text-primary-foreground">
                 <Navbar />
                 <Hero />

@@ -49,8 +49,11 @@ export const Projects = () => {
                     <div
                         key={index}
                         className={cn(
-                            "project-reveal group cursor-pointer bg-primary p-2 rounded-[28px] text-primary-foreground flex flex-col",
-                            project.className
+                            "project-reveal group bg-secondary p-2 rounded-[28px] text-secondary-foreground flex flex-col",
+                            project.className,
+                            project.inProgress
+                                ? "opacity-50 grayscale cursor-default"
+                                : "cursor-pointer"
                         )}
                     >
                         <div className="overflow-hidden rounded-[20px] mb-2 relative flex-1">
@@ -71,7 +74,7 @@ export const Projects = () => {
                                         <span className="text-xs text-muted-foreground font-sans uppercase">
                                             For
                                         </span>
-                                        <Avatar className="size-10 border border-primary-foreground/10">
+                                        <Avatar className="size-10 border border-secondary-foreground/10">
                                             <AvatarImage
                                                 src={project.clientLogo}
                                                 alt={project.client}
@@ -85,7 +88,7 @@ export const Projects = () => {
                                     </div>
                                 </div>
                                 <div className="text-right">
-                                    <span className="block text-sm font-sans mb-1 text-primary-foreground">
+                                    <span className="block text-sm font-sans mb-1 text-secondary-foreground">
                                         {project.year}
                                     </span>
                                     <span className="block text-sm text-muted-foreground font-sans">
@@ -93,7 +96,7 @@ export const Projects = () => {
                                     </span>
                                 </div>
                             </div>
-                            <p className="text-muted-foreground text-sm font-sans leading-relaxed">
+                            <p className="text-muted-foreground text-sm font-sans leading-relaxed truncate">
                                 {project.description}
                             </p>
                         </div>

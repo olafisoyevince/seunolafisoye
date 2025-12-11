@@ -54,8 +54,8 @@ export const About = () => {
                         </span>
                     </h2>
 
-                    <div className="about-reveal bg-primary text-primary-foreground p-8 md:p-12 rounded-4xl max-w-2xl shadow-2xl">
-                        <p className="text-lg md:text-xl font-sans leading-relaxed text-primary-foreground/90 mb-12">
+                    <div className="about-reveal bg-secondary text-secondary-foreground p-8 md:p-12 rounded-4xl max-w-2xl shadow-2xl">
+                        <p className="text-lg md:text-xl font-sans leading-relaxed text-secondary-foreground/90 mb-12">
                             "Engineering is about solving problems with
                             creativity. I craft user-focused digital
                             experiences. Building meaningful products is a
@@ -75,14 +75,14 @@ export const About = () => {
 
                             <div>
                                 <div className="flex flex-col items-start sm:flex-row sm:items-center gap-1 sm:gap-2 mb-1">
-                                    <span className="font-heading font-bold text-lg">
+                                    <span className="font-heading font-bold text-lg text-secondary-foreground">
                                         Oluwaseun
                                     </span>
-                                    <span className="bg-primary-foreground/20 text-xs px-2 py-0.5 rounded text-primary-foreground/80 w-fit whitespace-nowrap">
+                                    <span className="bg-secondary-foreground/20 text-xs px-2 py-0.5 rounded text-secondary-foreground/80 w-fit whitespace-nowrap">
                                         Frontend Engineer
                                     </span>
                                 </div>
-                                <div className="text-sm text-primary-foreground/60 font-sans">
+                                <div className="text-sm text-secondary-foreground/60 font-sans">
                                     Based in United Kingdom
                                 </div>
                             </div>
