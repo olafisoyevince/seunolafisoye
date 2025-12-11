@@ -28,11 +28,7 @@ export const Tools = () => {
     );
 
     return (
-        <section
-            id="tools"
-            className="py-32 px-6 max-w-360 mx-auto"
-            ref={containerRef}
-        >
+        <section id="tools" className="py-32" ref={containerRef}>
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
                 {/* Left Label */}
                 <div className="lg:col-span-3">

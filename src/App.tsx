@@ -37,13 +37,15 @@ function App() {
             {/* <main className="relative min-h-screen w-full overflow-hidden text-foreground selection:bg-primary selection:text-primary-foreground"> */}
             <div className="relative min-h-screen w-full bg-background bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:bg-[radial-gradient(#ffffff1a_1px,transparent_1px)] bg-size-[16px_16px] overflow-hidden text-foreground selection:bg-primary selection:text-primary-foreground transition-colors duration-300">
                 <Navbar />
-                <Hero />
-                <Projects />
-                <About />
-                <Experiences />
-                <Tools />
-                <Blogs />
-                <Contact />
+                <div className="px-6 max-w-360 mx-auto">
+                    <Hero />
+                    <Projects />
+                    <About />
+                    <Experiences />
+                    <Tools />
+                    <Blogs />
+                    <Contact />
+                </div>
             </div>
             {/* </main> */}
         </ThemeProvider>

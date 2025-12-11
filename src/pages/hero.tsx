@@ -13,28 +13,43 @@ export const Hero = () => {
         () => {
             const tl = gsap.timeline();
 
-            tl.from(titleRef.current, {
-                y: 50,
-                opacity: 0,
-                duration: 1.2,
-                ease: "power3.out",
-                delay: 0.2,
-            })
-                .from(
+            tl.fromTo(
+                titleRef.current,
+                {
+                    y: 50,
+                    opacity: 0,
+                },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 1.2,
+                    ease: "power3.out",
+                    delay: 0.2,
+                }
+            )
+                .fromTo(
                     textRef.current,
                     {
                         y: 30,
                         opacity: 0,
+                    },
+                    {
+                        y: 0,
+                        opacity: 1,
                         duration: 1,
                         ease: "power3.out",
                     },
                     "-=0.8"
                 )
-                .from(
+                .fromTo(
                     buttonRef.current,
                     {
                         y: 20,
                         opacity: 0,
+                    },
+                    {
+                        y: 0,
+                        opacity: 1,
                         duration: 0.8,
                         ease: "power3.out",
                     },
@@ -48,7 +63,7 @@ export const Hero = () => {
         <section
             id="home"
             ref={containerRef}
-            className="min-h-screen flex flex-col justify-center relative z-10 pt-32 px-6 max-w-360 mx-auto"
+            className="min-h-screen flex flex-col justify-center relative z-10 pt-32"
         >
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-start mx-auto w-full">
                 {/* Left Side - Headline */}

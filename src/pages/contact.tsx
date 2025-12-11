@@ -27,28 +27,31 @@ export const Contact = () => {
 
     useGSAP(
         () => {
-            gsap.from(".contact-reveal", {
-                scrollTrigger: {
-                    trigger: containerRef.current,
-                    start: "top bottom-=100",
-                    toggleActions: "play none none reverse",
+            gsap.fromTo(
+                ".contact-reveal",
+                {
+                    y: 30,
+                    opacity: 0,
                 },
-                y: 30,
-                opacity: 0,
-                duration: 1,
-                stagger: 0.1,
-                ease: "power3.out",
-            });
+                {
+                    scrollTrigger: {
+                        trigger: containerRef.current,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse",
+                    },
+                    y: 0,
+                    opacity: 1,
+                    duration: 1,
+                    stagger: 0.1,
+                    ease: "power3.out",
+                }
+            );
         },
         { scope: containerRef }
     );
 
     return (
-        <section
-            id="contact"
-            className="py-12 px-6 max-w-360 mx-auto"
-            ref={containerRef}
-        >
+        <section id="contact" className="py-12" ref={containerRef}>
             {/* Content */}
             <div className="relative z-10 max-w-4xl">
                 {/* Avatars */}
@@ -79,7 +82,7 @@ export const Contact = () => {
                 <div className="flex flex-wrap gap-4">
                     <Button
                         asChild
-                        className="contact-reveal group h-auto rounded-full bg-primary-foreground w-44 py-4 text-base font-medium text-primary hover:bg-primary-foreground/90"
+                        className="contact-reveal group h-auto rounded-full bg-primary w-44 py-4 text-base font-medium text-primary-foreground hover:bg-primary/90"
                     >
                         <a
                             href="/Oluwaseun Olafisoye - Resume.pdf"
@@ -96,7 +99,7 @@ export const Contact = () => {
 
                     <Button
                         asChild
-                        className="contact-reveal group h-auto rounded-full bg-primary-foreground w-44 py-4 text-base font-medium text-primary hover:bg-primary-foreground/90"
+                        className="contact-reveal group h-auto rounded-full bg-primary w-44 py-4 text-base font-medium text-primary-foreground hover:bg-primary/90"
                     >
                         <a href="mailto:olafisoyevincent@gmail.com">
                             Get in touch

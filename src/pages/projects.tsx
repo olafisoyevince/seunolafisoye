@@ -30,11 +30,7 @@ export const Projects = () => {
     );
 
     return (
-        <section
-            id="work"
-            className="py-32 px-6 max-w-360 mx-auto"
-            ref={containerRef}
-        >
+        <section id="work" className="py-32" ref={containerRef}>
             <div className="flex justify-between items-baseline mb-16">
                 <h2 className="project-reveal text-4xl md:text-6xl font-heading font-medium tracking-tight">
                     Selected projects
