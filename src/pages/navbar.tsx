@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import { Menu, X, Clock } from "lucide-react";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-import { CVButton } from "./CVButton";
-import { ModeToggle } from "./mode-toggle";
+import { CVButton } from "./cv-button";
+import { ModeToggle } from "../components/ui/mode-toggle";
 
 gsap.registerPlugin(ScrollToPlugin);
 

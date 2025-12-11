@@ -1,13 +1,13 @@
 import { Moon, Sun, Laptop } from "lucide-react";
-import { useTheme } from "./theme-provider";
-import { Button } from "./ui/button";
+import { useTheme } from "../theme-provider";
+import { Button } from "./button";
 import {
     Menubar,
     MenubarContent,
     MenubarItem,
     MenubarMenu,
     MenubarTrigger,
-} from "./ui/menubar";
+} from "./menubar";
 
 export function ModeToggle() {
     const { setTheme } = useTheme();

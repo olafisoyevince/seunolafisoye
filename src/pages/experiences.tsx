@@ -2,7 +2,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { CVButton } from "./CVButton";
+import { CVButton } from "./cv-button";
 
 gsap.registerPlugin(ScrollTrigger);
 

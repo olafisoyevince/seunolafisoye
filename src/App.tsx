@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 import Lenis from "lenis";
-import { Navbar } from "./components/Navbar";
-import { Hero } from "./components/Hero";
-import { About } from "./components/About";
-import { Experiences } from "./components/Experiences";
-import { Tools } from "./components/Tools";
-import { Projects } from "./components/Projects";
-import { Blogs } from "./components/Blogs";
-import { Contact } from "./components/Contact";
+import { Navbar } from "./pages/navbar";
+import { Hero } from "./pages/hero";
+import { About } from "./pages/about";
+import { Experiences } from "./pages/experiences";
+import { Tools } from "./pages/tools";
+import { Projects } from "./pages/projects";
+import { Blogs } from "./pages/blogs";
+import { Contact } from "./pages/contact";
 
 import { ThemeProvider } from "./components/theme-provider";
 

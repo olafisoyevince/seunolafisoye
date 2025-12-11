@@ -3,23 +3,9 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowUpRight } from "lucide-react";
+import { BLOGS } from "@/lib/data";
 
 gsap.registerPlugin(ScrollTrigger);
-
-const blogs = [
-    {
-        title: "Redux: in my own words",
-        date: "Aug 2, 2023",
-        category: "Development",
-        link: "https://dev.to/seunolafisoye/redux-in-my-own-words-65c",
-    },
-    {
-        title: "Tips on Responsiveness",
-        date: "Jul 12, 2023",
-        category: "Development",
-        link: "https://dev.to/seunolafisoye/tips-on-responsiveness-2hj8",
-    },
-];
 
 export const Blogs = () => {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -70,7 +56,7 @@ export const Blogs = () => {
                     </h2>
 
                     <div className="space-y-8">
-                        {blogs.map((blog, index) => (
+                        {BLOGS.map((blog, index) => (
                             <a
                                 key={index}
                                 href={blog.link}

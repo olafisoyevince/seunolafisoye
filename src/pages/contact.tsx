@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowRight, FileText, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { CVButton } from "./CVButton";
+import { CVButton } from "./cv-button";
 
 gsap.registerPlugin(ScrollTrigger);
 
