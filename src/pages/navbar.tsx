@@ -3,7 +3,7 @@ import { Menu, X, Clock } from "lucide-react";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { CVButton } from "../components/cv-button";
-import { ThemeToggle } from "../components/ui/theme-toggle";
+import { ThemeToggle } from "../components/theme-toggle";
 
 gsap.registerPlugin(ScrollToPlugin);
 
