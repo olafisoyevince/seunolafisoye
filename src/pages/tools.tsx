@@ -2,45 +2,9 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { TOOLS } from "@/lib/data";
 
 gsap.registerPlugin(ScrollTrigger);
-
-const tools = [
-    {
-        name: "TypeScript",
-        icon: "https://cdn.simpleicons.org/typescript/3178C6",
-    },
-    {
-        name: "JavaScript",
-        icon: "https://cdn.simpleicons.org/javascript/F7DF1E",
-    },
-    { name: "Python", icon: "https://cdn.simpleicons.org/python/3776AB" },
-    { name: "Tanstack", icon: "https://cdn.simpleicons.org/tanstack/000000" },
-    { name: "Node.js", icon: "https://cdn.simpleicons.org/nodedotjs/339933" },
-    { name: "React", icon: "https://cdn.simpleicons.org/react/61DAFB" },
-    { name: "Next.js", icon: "https://cdn.simpleicons.org/nextdotjs/000000" },
-    {
-        name: "Tailwind CSS",
-        icon: "https://cdn.simpleicons.org/tailwindcss/06B6D4",
-    },
-    { name: "Shadcn/ui", icon: "https://cdn.simpleicons.org/shadcnui/000000" },
-    { name: "Framer", icon: "https://cdn.simpleicons.org/framer/0055FF" },
-    { name: "Figma", icon: "https://cdn.simpleicons.org/figma/F24E1E" },
-    { name: "Redux", icon: "https://cdn.simpleicons.org/redux/764ABC" },
-    { name: "C++", icon: "https://cdn.simpleicons.org/cplusplus/00599C" },
-    { name: "Three.js", icon: "https://cdn.simpleicons.org/threedotjs/000000" },
-    {
-        name: "PostgreSQL",
-        icon: "https://cdn.simpleicons.org/postgresql/4169E1",
-    },
-    { name: "Git", icon: "https://cdn.simpleicons.org/git/F05032" },
-    { name: "Docker", icon: "https://cdn.simpleicons.org/docker/2496ED" },
-    { name: "MySQL", icon: "https://cdn.simpleicons.org/mysql/4479A1" },
-    { name: "MongoDB", icon: "https://cdn.simpleicons.org/mongodb/47A248" },
-    { name: "Redis", icon: "https://cdn.simpleicons.org/redis/DC382D" },
-    { name: "OpenAI", icon: "https://cdn.simpleicons.org/openai/000000" },
-    { name: "OpenAI", icon: "https://cdn.simpleicons.org/tensorflow/FF6F00" },
-];
 
 export const Tools = () => {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -88,7 +52,7 @@ export const Tools = () => {
                     </h2>
 
                     <div className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-8 md:gap-4">
-                        {tools.map((tool, index) => (
+                        {TOOLS.map((tool, index) => (
                             <div
                                 key={index}
                                 className="tool-reveal flex flex-col items-center justify-center gap-4 group cursor-pointer"

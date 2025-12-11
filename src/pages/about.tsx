@@ -54,7 +54,7 @@ export const About = () => {
                         </span>
                     </h2>
 
-                    <div className="about-reveal bg-secondary text-secondary-foreground p-8 md:p-12 rounded-4xl max-w-2xl shadow-2xl">
+                    <div className="about-reveal bg-secondary text-secondary-foreground p-8 md:p-12 rounded-4xl max-w-2xl shadow-md">
                         <p className="text-lg md:text-xl font-sans leading-relaxed text-secondary-foreground/90 mb-12">
                             "Engineering is about solving problems with
                             creativity. I craft user-focused digital

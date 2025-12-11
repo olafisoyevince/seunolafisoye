@@ -9,7 +9,7 @@ import {
     MenubarTrigger,
 } from "./menubar";
 
-export function ModeToggle() {
+export function ThemeToggle() {
     const { setTheme } = useTheme();
 
     return (

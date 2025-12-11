@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowRight, FileText, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { CVButton } from "./cv-button";
+import { CVButton } from "../components/cv-button";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -16,7 +16,7 @@ export const Contact = () => {
     useEffect(() => {
         const now = new Date();
         setDate(
-            now.toLocaleDateString("en-US", {
+            now.toLocaleDateString("en-GB", {
                 weekday: "long",
                 year: "numeric",
                 month: "numeric",

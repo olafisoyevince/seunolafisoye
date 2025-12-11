@@ -6,8 +6,14 @@ export const PROJECTS = [
         category: "Frontend Architecture, Frontend Engineering, Documentation",
         projectImage: "grid78_app.png",
         year: "2024",
-        description:
-            "A healthcare SaaS platform offering appointment scheduling, and patient management solutions for clinics and hospitals in Nigeria. Also, features a event management system to consolidate similar clinical events and notify practitioners of possible diagnosis hypothesis i.e. events leading to a terminal illness properly captured by the system such that whenever a patter like that is detected in future patients, the system notifies the practitioner of the possible diagnosis hypothesis.",
+        description: `A healthcare SaaS platform offering appointment scheduling,
+             and patient management solutions for clinics and hospitals in 
+             Nigeria.Also, features a event management system to consolidate 
+             similar clinical events and notify practitioners of possible 
+             diagnosis hypothesis i.e.events leading to a terminal illness 
+             properly captured by the system such that whenever a patter 
+             like that is detected in future patients, the system notifies 
+             the practitioner of the possible diagnosis hypothesis.`,
         className: "md:col-span-1",
         inProgress: false,
         href: "https://app.grid78.com",
@@ -19,8 +25,9 @@ export const PROJECTS = [
         category: "Frontend Architecture, Frontend Engineering, Documentation",
         projectImage: "/kairos_app.png",
         year: "2025",
-        description:
-            "A job recruitment platform that matches Nigerian graduates and jobseekes with potential employers both local and international based on their skills, experience, and preferences.",
+        description: `A job recruitment platform that matches Nigerian graduates and 
+            jobseekes with potential employers both local and international
+            based on their skills, experience, and preferences.`,
         className: "md:col-span-1",
         inProgress: false,
         href: "https://app.kairosng.com",
@@ -106,4 +113,41 @@ export const BLOGS = [
         category: "Development",
         link: "https://dev.to/seunolafisoye/tips-on-responsiveness-2hj8",
     },
+];
+
+export const TOOLS = [
+    {
+        name: "TypeScript",
+        icon: "https://cdn.simpleicons.org/typescript/3178C6",
+    },
+    {
+        name: "JavaScript",
+        icon: "https://cdn.simpleicons.org/javascript/F7DF1E",
+    },
+    { name: "Python", icon: "https://cdn.simpleicons.org/python/3776AB" },
+    { name: "Tanstack", icon: "https://cdn.simpleicons.org/tanstack/000000" },
+    { name: "Node.js", icon: "https://cdn.simpleicons.org/nodedotjs/339933" },
+    { name: "React", icon: "https://cdn.simpleicons.org/react/61DAFB" },
+    { name: "Next.js", icon: "https://cdn.simpleicons.org/nextdotjs/000000" },
+    {
+        name: "Tailwind CSS",
+        icon: "https://cdn.simpleicons.org/tailwindcss/06B6D4",
+    },
+    { name: "Shadcn/ui", icon: "https://cdn.simpleicons.org/shadcnui/000000" },
+    { name: "Framer", icon: "https://cdn.simpleicons.org/framer/0055FF" },
+    { name: "Figma", icon: "https://cdn.simpleicons.org/figma/F24E1E" },
+    { name: "Redux", icon: "https://cdn.simpleicons.org/redux/764ABC" },
+    { name: "C++", icon: "https://cdn.simpleicons.org/cplusplus/00599C" },
+    { name: "Three.js", icon: "https://cdn.simpleicons.org/threedotjs/000000" },
+    {
+        name: "PostgreSQL",
+        icon: "https://cdn.simpleicons.org/postgresql/4169E1",
+    },
+    { name: "Git", icon: "https://cdn.simpleicons.org/git/F05032" },
+    { name: "Docker", icon: "https://cdn.simpleicons.org/docker/2496ED" },
+    { name: "MySQL", icon: "https://cdn.simpleicons.org/mysql/4479A1" },
+    { name: "MongoDB", icon: "https://cdn.simpleicons.org/mongodb/47A248" },
+    { name: "Redis", icon: "https://cdn.simpleicons.org/redis/DC382D" },
+    { name: "OpenAI", icon: "https://cdn.simpleicons.org/openai/000000" },
+    { name: "OpenAI", icon: "https://cdn.simpleicons.org/tensorflow/FF6F00" },
 ];
