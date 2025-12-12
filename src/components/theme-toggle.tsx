@@ -107,15 +107,15 @@ export function ThemeToggle() {
                     </Button>
                 </MenubarTrigger>
                 <MenubarContent align="end">
-                    <MenubarItem onClick={() => setTheme("light")}>
+                    <MenubarItem onClick={(e) => setTheme("light", e)}>
                         <Sun className="h-4 w-4" />
                         Light
                     </MenubarItem>
-                    <MenubarItem onClick={() => setTheme("dark")}>
+                    <MenubarItem onClick={(e) => setTheme("dark", e)}>
                         <Moon className="h-4 w-4" />
                         Dark
                     </MenubarItem>
-                    <MenubarItem onClick={() => setTheme("system")}>
+                    <MenubarItem onClick={(e) => setTheme("system", e)}>
                         <Laptop className="h-4 w-4" />
                         System
                     </MenubarItem>
