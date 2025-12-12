@@ -5,11 +5,13 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar";
 import { cn } from "../lib/utils";
 import { PROJECTS } from "@/lib/data";
+import { useNavigate } from "react-router";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export const Projects = () => {
     const containerRef = useRef<HTMLDivElement>(null);
+    const navigate = useNavigate();
 
     useGSAP(
         () => {
@@ -44,6 +46,11 @@ export const Projects = () => {
                 {PROJECTS.map((project, index) => (
                     <div
                         key={index}
+                        onClick={() =>
+                            project.id &&
+                            !project.inProgress &&
+                            navigate(`/project/${project.id}`)
+                        }
                         className={cn(
                             "project-reveal group bg-secondary p-2 rounded-[28px] text-secondary-foreground flex flex-col",
                             project.className,

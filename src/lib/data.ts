@@ -1,10 +1,11 @@
 export const PROJECTS = [
     {
+        id: "grid78",
         title: "Grid78",
         client: "Turing Tower",
         clientLogo: "/turing_tower_logo.jpeg",
         category: "Frontend Architecture, Frontend Engineering, Documentation",
-        projectImage: "grid78_app.png",
+        projectImage: "/grid78_app.png",
         year: "2024",
         description: `A healthcare SaaS platform offering appointment scheduling,
              and patient management solutions for clinics and hospitals in 
@@ -19,6 +20,7 @@ export const PROJECTS = [
         href: "https://app.grid78.com",
     },
     {
+        id: "kairos",
         title: "Kairos",
         client: "Kairos Nexus Global",
         clientLogo: "kairos_logo.jpeg",
