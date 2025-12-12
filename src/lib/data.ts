@@ -1,5 +1,21 @@
 export const PROJECTS = [
     {
+        id: "portfolio",
+        title: "'Folio 25",
+        client: "Myself",
+        clientLogo: "/my_logo.svg",
+        category: "Design, Frontend Engineering",
+        projectImage: "/folio.png",
+        year: "2025",
+        description: `A personal portfolio website to showcase my skills,
+             projects, and experiences as a frontend engineer. It features a modern
+             design, smooth animations, and responsive layout to provide an
+             engaging user experience across all devices.`,
+        className: "md:col-span-1",
+        inProgress: false,
+        href: "https://seunolafisoye.dev",
+    },
+    {
         id: "grid78",
         title: "Grid78",
         client: "Turing Tower",
