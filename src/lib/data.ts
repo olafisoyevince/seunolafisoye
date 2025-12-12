@@ -50,20 +50,26 @@ export const PROJECTS = [
         inProgress: false,
         href: "https://app.kairosng.com",
     },
-    // {
-    //     title: "Desk",
-    //     client: "Desk Inc.",
-    //     clientLogo: "desk_logo.svg",
-    //     category:
-    //         "Frontend Architecture, Frontend Engineering, Backend Engineering, Documentation",
-    //     projectImage: "/desk_app.png",
-    //     year: "2025",
-    //     description:
-    //         "An AI powered customer support platform that leverages natural language processing to provide instant and accurate responses to customer inquiries. It contains two main products - DeskAI and DeskBot. DeskAI is an AI-powered customer support platform that uses natural language processing to provide instant and accurate responses to customer inquiries. DeskBot is an AI chatbot that can be integrated into websites and messaging platforms to provide 24/7 customer support.",
-    //     className: "md:col-span-1",
-    //     inProgress: true,
-    //     href: "https://app.deskinc.com",
-    // },
+    {
+        id: "desk",
+        title: "Desk",
+        client: "Desk Inc.",
+        clientLogo: "/desk_logo.svg",
+        category:
+            "Backend Engineering, Frontend Architecture, Frontend Engineering, Documentation",
+        projectImage:
+            "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop",
+        year: "2025",
+        description: `An AI powered customer support platform that leverages natural language 
+            processing to provide instant and accurate responses to customer inquiries.
+            It contains two main products - DeskAI and DeskBot. DeskAI is an AI-powered
+            customer support platform that uses natural language processing to provide instant
+            and accurate responses to customer inquiries. DeskBot is an AI chatbot that can be
+            integrated into websites and messaging platforms to provide 24/7 customer support.`,
+        className: "md:col-span-1",
+        inProgress: true,
+        href: "https://app.deskinc.com",
+    },
     // {
     //     title: "Gamestats",
     //     client: "ProGaming",

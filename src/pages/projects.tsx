@@ -67,39 +67,58 @@ export const Projects = () => {
                             />
                         </div>
 
-                        <div className="px-2 mb-2">
+                        <div className="px-2 mb-2 space-y-2">
                             <div className="flex justify-between items-start mb-4">
                                 <div>
-                                    <h3 className="text-2xl font-sans font-medium group-hover:text-muted-foreground transition-colors mb-2">
-                                        {project.title}
+                                    <h3 className="text-2xl font-sans font-medium group-hover:text-muted-foreground transition-colors mb-2 flex items-center">
+                                        {project.title}{" "}
+                                        {project.inProgress && (
+                                            <span className="italic text-sm text-muted-foreground">
+                                                — In Progress
+                                            </span>
+                                        )}
                                     </h3>
-                                    <div className="flex items-center gap-2">
-                                        <span className="text-xs text-muted-foreground font-sans uppercase">
-                                            For
+
+                                    <div className="text-left">
+                                        <span className="block text-sm font-sans mb-1 text-secondary-foreground">
+                                            {project.year}
                                         </span>
-                                        <Avatar className="size-10 border border-secondary-foreground/10">
-                                            <AvatarImage
-                                                src={project.clientLogo}
-                                                alt={project.client}
-                                            />
-                                            <AvatarFallback className="text-[10px] text-primary font-sans">
-                                                {project.client
-                                                    .substring(0, 2)
-                                                    .toUpperCase()}
-                                            </AvatarFallback>
-                                        </Avatar>
                                     </div>
                                 </div>
-                                <div className="text-right">
-                                    <span className="block text-sm font-sans mb-1 text-secondary-foreground">
-                                        {project.year}
+
+                                <div className="flex items-center gap-2">
+                                    <span className="text-xs text-muted-foreground font-sans uppercase">
+                                        For
                                     </span>
-                                    <span className="block text-sm text-muted-foreground font-sans">
-                                        {project.category}
-                                    </span>
+                                    <Avatar className="size-10 border border-secondary-foreground/10">
+                                        <AvatarImage
+                                            src={project.clientLogo}
+                                            alt={project.client}
+                                            className={
+                                                project.clientLogo.includes(
+                                                    "desk_logo"
+                                                ) ||
+                                                project.clientLogo.includes(
+                                                    "my_logo"
+                                                )
+                                                    ? "p-1"
+                                                    : ""
+                                            }
+                                        />
+                                        <AvatarFallback className="text-[10px] text-primary font-sans">
+                                            {project.client
+                                                .substring(0, 2)
+                                                .toUpperCase()}
+                                        </AvatarFallback>
+                                    </Avatar>
                                 </div>
                             </div>
-                            <p className="text-muted-foreground text-sm font-sans leading-relaxed truncate">
+                            <div className="text-left">
+                                <span className="block text-sm text-muted-foreground font-sans">
+                                    {project.category}
+                                </span>
+                            </div>
+                            <p className="text-muted-foreground text-sm font-sans leading-relaxed line-clamp-2">
                                 {project.description}
                             </p>
                         </div>
