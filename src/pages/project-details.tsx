@@ -154,13 +154,15 @@ export const ProjectDetails = () => {
                 </div>
             </div>
 
-            <div className="image-animate w-full overflow-hidden bg-secondary p-2 rounded-[28px] border border-border/50 shadow">
-                <img
-                    src={project.projectImage}
-                    alt={project.title}
-                    className="w-full h-auto object-cover rounded-[20px]"
-                />
-            </div>
+            <Link to={project.href} target="_blank" rel="noopener noreferrer">
+                <div className="image-animate w-full overflow-hidden bg-secondary p-2 rounded-[28px] border border-border/50 shadow">
+                    <img
+                        src={project.projectImage}
+                        alt={project.title}
+                        className="w-full h-auto object-cover rounded-[20px]"
+                    />
+                </div>
+            </Link>
         </section>
     );
 };
