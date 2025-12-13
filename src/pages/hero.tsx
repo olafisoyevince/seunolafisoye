@@ -104,7 +104,7 @@ export const Hero = () => {
                         ref={textRef}
                         className="text-lg md:text-xl text-muted-foreground font-sans leading-relaxed max-w-md"
                     >
-                        I'm Oluwaseun Olafisoye, a Frontend Engineer passionate
+                        I'm Oluwaseun Olafisoye, a frontend engineer passionate
                         about crafting accessible, pixel-perfect user interfaces
                         that blend design and technology seamlessly.
                     </p>
