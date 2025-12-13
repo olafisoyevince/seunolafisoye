@@ -94,16 +94,21 @@ export const Projects = () => {
                                         <AvatarImage
                                             src={project.clientLogo}
                                             alt={project.client}
-                                            className={
+                                            className={cn(
                                                 project.clientLogo.includes(
                                                     "desk_logo"
-                                                ) ||
-                                                project.clientLogo.includes(
-                                                    "my_logo"
                                                 )
                                                     ? "p-1"
+                                                    : "",
+                                                project.clientLogo.includes(
+                                                    "my_logo"
+                                                ) ||
+                                                    project.clientLogo.includes(
+                                                        "desk_logo"
+                                                    )
+                                                    ? "dark:invert"
                                                     : ""
-                                            }
+                                            )}
                                         />
                                         <AvatarFallback className="text-[10px] text-primary font-sans">
                                             {project.client

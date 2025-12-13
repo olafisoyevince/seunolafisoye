@@ -7,12 +7,7 @@
       letter-spacing: -2px;
       dominant-baseline: middle;
       text-anchor: middle;
-    }
-    @media (prefers-color-scheme: dark) {
-      text { fill: white; }
-    }
-    @media (prefers-color-scheme: light) {
-      text { fill: black; }
+      fill: black;
     }
   </style>
   <text x="50%" y="55%" font-size="24">SEUN.</text>
