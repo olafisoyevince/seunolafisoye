@@ -6,6 +6,7 @@ import { ArrowRight, FileText, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { CVButton } from "../components/cv-button";
+import { Link } from "react-router";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -59,7 +60,7 @@ export const Contact = () => {
                     {["/me.jpg"].map((src, i) => (
                         <Avatar
                             key={i}
-                            className="w-14 h-14 border-2 border-primary"
+                            className="w-20 h-20 border-2 border-primary rounded-3xl rotate-5"
                         >
                             <AvatarImage
                                 src={src}
@@ -112,8 +113,8 @@ export const Contact = () => {
             {/* Footer Bottom */}
             <div className="contact-reveal mt-32 pt-8 border-t border-primary/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground font-sans">
                 <div className="flex items-center gap-4">
-                    <a
-                        href="https://x.com/fisoyeseun_"
+                    <Link
+                        to="https://x.com/fisoyeseun_"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-primary hover:opacity-80"
@@ -127,15 +128,22 @@ export const Contact = () => {
                             <title>X</title>
                             <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
                         </svg>
-                    </a>
-                    <a
-                        href="https://linkedin.com/in/oluwaseun-olafisoye"
+                    </Link>
+                    <Link
+                        to="https://linkedin.com/in/oluwaseun-olafisoye"
                         className="text-primary hover:opacity-80"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         <Linkedin size={16} fill="currentColor" />
-                    </a>
+                    </Link>
+                    <Link to={"https://github.com/olafisoyevincent"}>
+                        <img
+                            src="https://cdn.simpleicons.org/github/181717"
+                            className="object-contain w-4 h-4 fill-current dark:invert hover:opacity-80"
+                            alt="GitHub"
+                        />
+                    </Link>
                 </div>
 
                 <div className="md:absolute md:left-1/2 md:-translate-x-1/2">

@@ -60,7 +60,7 @@ export const About = () => {
                         </p>
 
                         <div className="flex items-center gap-4">
-                            <Avatar className="w-14 h-14 border-2 border-primary">
+                            <Avatar className="w-14 h-14 border-2 border-primary rounded-[20px] rotate-5">
                                 <AvatarImage
                                     src="/me.jpg"
                                     alt="Team member"

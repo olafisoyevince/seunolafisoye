@@ -2,6 +2,8 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export const Hero = () => {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -72,25 +74,28 @@ export const Hero = () => {
                         ref={titleRef}
                         className="text-5xl md:text-7xl lg:text-[5rem] font-heading font-semibold tracking-tight leading-[1.1] text-foreground mb-10"
                     >
-                        Hey! I{" "}
+                        hey! I{" "}
                         <span className="inline-flex -mb-2 md:-mb-4 mx-2">
-                            <img
-                                src={"/me.jpg"}
-                                alt="Me"
-                                className="w-12 h-12 md:w-20 md:h-20 rounded-full object-cover border-2 border-foreground/10 rotate-3"
-                            />
+                            <Avatar className="w-20 h-20 border-2 border-primary rounded-3xl rotate-5">
+                                <AvatarImage
+                                    src="/me.jpg"
+                                    alt="Team member"
+                                    className="object-cover"
+                                />
+                                <AvatarFallback>ME</AvatarFallback>
+                            </Avatar>
                         </span>{" "}
-                        build meaningful experiences that connect people and
-                        ideas worldwide.
+                        build polished, user-focused digital experiences that
+                        help businesses bring ideas to life.
                     </h1>
 
-                    <a
+                    <Link
                         ref={buttonRef}
-                        href="#contact"
+                        to="#contact"
                         className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 rounded-full font-sans font-medium text-lg hover:bg-primary/90 transition-all hover:scale-105"
                     >
                         Get in touch <ArrowRight size={20} />
-                    </a>
+                    </Link>
                 </div>
 
                 {/* Right Side - Description */}
