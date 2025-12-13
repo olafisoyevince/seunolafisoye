@@ -2,7 +2,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar";
+// import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -50,7 +50,7 @@ export const About = () => {
                         </span>
                     </h2>
 
-                    <div className="about-reveal bg-secondary text-secondary-foreground p-8 md:p-12 rounded-4xl max-w-2xl shadow-md">
+                    {/* <div className="about-reveal bg-secondary text-secondary-foreground p-8 md:p-12 rounded-4xl max-w-2xl shadow-md">
                         <p className="text-lg md:text-xl font-sans leading-relaxed text-secondary-foreground/90 mb-12">
                             "Engineering is about solving problems with
                             creativity. I craft user-focused digital
@@ -83,7 +83,7 @@ export const About = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </section>
