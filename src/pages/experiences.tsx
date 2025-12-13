@@ -3,40 +3,9 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { CVButton } from "../components/cv-button";
+import { EXPERIENCES } from "@/lib/data";
 
 gsap.registerPlugin(ScrollTrigger);
-
-const experiences = [
-    {
-        title: "Senior Frontend Engineer",
-        company: "Turing Tower",
-        period: "April 2024 - Present",
-        description:
-            "Directed development of enterprise and healthcare web applications, improving operational efficiency and contributing to revenue growth.",
-    },
-    {
-        title: "Software Engineer",
-        company: "Freelance",
-        period: "September 2023 - Present",
-        description:
-            "Built landing pages and web apps for small businesses, wrote technical articles, and taught frontend engineering to 20+ students.",
-    },
-    {
-        title: "Information Security, Service Desk Officer",
-        company: "Septagus Consulting / Sterling Bank Plc",
-        period: "June 2023 - September 2023",
-        description:
-            "Supported cybersecurity research, incident response, and IT operations while contributing to security compliance.",
-    },
-
-    {
-        title: "Frontend Developer",
-        company: "Zero & One Technologies Ltd",
-        period: "May 2022 - June 2023",
-        description:
-            "Developed a large-scale election results visualization app, created reusable UI components, and mentored interns.",
-    },
-];
 
 export const Experiences = () => {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -84,13 +53,13 @@ export const Experiences = () => {
 
                     <div className="service-reveal mb-16">
                         <CVButton
-                            className="bg-primary text-primary-foreground px-6 py-3 rounded-full hover:bg-primary/90"
-                            text="View Full Resume"
+                            className="bg-primary text-primary-foreground px-6 py-4 rounded-full hover:bg-primary/90"
+                            text="View my CV"
                         />
                     </div>
 
                     <div className="space-y-16">
-                        {experiences.map((experience, index) => (
+                        {EXPERIENCES.map((experience, index) => (
                             <div
                                 key={index}
                                 className="service-reveal border-t border-border pt-12 flex flex-col md:flex-row justify-between gap-4 md:gap-8 group hover:border-foreground/30 transition-colors"

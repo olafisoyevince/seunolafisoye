@@ -1,8 +1,6 @@
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { ArrowRight } from "lucide-react";
-import { Link } from "react-router";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { CVButton } from "@/components/cv-button";
 
@@ -10,7 +8,7 @@ export const Hero = () => {
     const containerRef = useRef<HTMLDivElement>(null);
     const titleRef = useRef<HTMLHeadingElement>(null);
     const textRef = useRef<HTMLParagraphElement>(null);
-    const buttonRef = useRef<HTMLAnchorElement>(null);
+    const buttonRef = useRef<HTMLDivElement>(null);
 
     useGSAP(
         () => {
@@ -90,7 +88,12 @@ export const Hero = () => {
                         help businesses bring ideas to life.
                     </h1>
 
-                    <CVButton />
+                    <div ref={buttonRef} className="mt-8">
+                        <CVButton
+                            className="bg-primary text-primary-foreground px-6 py-4 rounded-full hover:bg-primary/90"
+                            text="View my CV"
+                        />
+                    </div>
                 </div>
 
                 {/* Right Side - Description */}

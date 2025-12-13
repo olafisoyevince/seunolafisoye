@@ -2,8 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ArrowRight, FileText, Linkedin } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { ArrowRight, Linkedin } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { CVButton } from "../components/cv-button";
 import { Link } from "react-router";
@@ -81,32 +80,22 @@ export const Contact = () => {
                 </h2>
 
                 <div className="flex flex-wrap gap-4">
-                    <Button
-                        asChild
-                        className="contact-reveal group h-auto rounded-full bg-primary w-44 py-4 text-base font-medium text-primary-foreground hover:bg-primary/90"
-                    >
-                        <a
-                            href="/Oluwaseun Olafisoye - Resume.pdf"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Resume
-                            <FileText
-                                size={20}
-                                className="transition-transform duration-300 group-hover:scale-110"
-                            />
-                        </a>
-                    </Button>
+                    <div className="contact-reveal mb-16">
+                        <CVButton
+                            className="bg-primary text-primary-foreground px-6 py-4 rounded-full hover:bg-primary/90"
+                            text="View my CV"
+                        />
+                    </div>
 
-                    <Button
-                        asChild
-                        className="contact-reveal group h-auto rounded-full bg-primary w-44 py-4 text-base font-medium text-primary-foreground hover:bg-primary/90"
-                    >
-                        <a href="mailto:olafisoyevincent@gmail.com">
+                    <div className="contact-reveal">
+                        <Link
+                            to="mailto:olafisoyevincent@gmail.com"
+                            className="group inline-flex items-center gap-2 cursor-pointer transition-all duration-300 ease-out hover:scale-105 font-semibold bg-primary text-primary-foreground px-6 py-4 rounded-full hover:bg-primary/90"
+                        >
                             Get in touch
-                            <ArrowRight className="size-5 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
-                        </a>
-                    </Button>
+                            <ArrowRight className="size-5 transition-transform duration-300 ease-out group-hover:translate-x-1 group-hover:-translate-y-1" />
+                        </Link>
+                    </div>
                 </div>
             </div>
 

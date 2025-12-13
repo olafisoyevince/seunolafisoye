@@ -175,3 +175,35 @@ export const TOOLS = [
     { name: "OpenAI", icon: "https://cdn.simpleicons.org/openai/000000" },
     { name: "OpenAI", icon: "https://cdn.simpleicons.org/tensorflow/FF6F00" },
 ];
+
+export const EXPERIENCES = [
+    {
+        title: "Senior Frontend Engineer",
+        company: "Turing Tower",
+        period: "April 2024 - Present",
+        description:
+            "Directed development of enterprise and healthcare web applications, improving operational efficiency and contributing to revenue growth.",
+    },
+    {
+        title: "Software Engineer",
+        company: "Freelance",
+        period: "September 2023 - Present",
+        description:
+            "Built landing pages and web apps for small businesses, wrote technical articles, and taught frontend engineering to 20+ students.",
+    },
+    {
+        title: "Information Security, Service Desk Officer",
+        company: "Septagus Consulting / Sterling Bank Plc",
+        period: "June 2023 - September 2023",
+        description:
+            "Supported cybersecurity research, incident response, and IT operations while contributing to security compliance.",
+    },
+
+    {
+        title: "Frontend Developer",
+        company: "Zero & One Technologies Ltd",
+        period: "May 2022 - June 2023",
+        description:
+            "Developed a large-scale election results visualization app, created reusable UI components, and mentored interns.",
+    },
+];
