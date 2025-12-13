@@ -98,10 +98,11 @@ export const Navbar = () => {
                                     Open to work
                                 </span>
                             </div>
+
                             <div className="px-4 py-2 rounded-full text-xs font-sans  border border-white/10 flex items-center gap-2">
                                 {time} <Clock size={12} />
                             </div>
-                            <CVButton className="px-4 py-2 rounded-full text-xs font-sans border border-white/10 text-white hover:bg-white/10" />
+
                             <ThemeToggle />
                         </div>
                     </div>
