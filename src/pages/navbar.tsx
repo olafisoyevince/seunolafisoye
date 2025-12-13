@@ -4,6 +4,7 @@ import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { CVButton } from "../components/cv-button";
 import { ThemeToggle } from "../components/theme-toggle";
+import { Logo } from "../components/logo";
 import { useLocation, useNavigate } from "react-router";
 
 gsap.registerPlugin(ScrollToPlugin);
@@ -86,9 +87,9 @@ export const Navbar = () => {
                     <div className="flex items-center gap-4 lg:gap-8">
                         <div
                             onClick={(e) => handleScroll(e, "#home")}
-                            className="text-2xl font-heading font-bold tracking-tighter cursor-pointer"
+                            className="cursor-pointer"
                         >
-                            SEUN.
+                            <Logo />
                         </div>
 
                         <div className="hidden lg:flex items-center gap-3">

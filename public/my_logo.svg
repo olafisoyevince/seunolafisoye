@@ -1,9 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 256">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 24">
   <style>
-    path { fill: black; }
+    @import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&amp;display=swap');
+    text {
+      font-family: "Google Sans Flex", system-ui, sans-serif;
+      font-weight: bold;
+      letter-spacing: -2px;
+    }
     @media (prefers-color-scheme: dark) {
-      path { fill: white; }
+      text { fill: white; }
+    }
+    @media (prefers-color-scheme: light) {
+      text { fill: black; }
     }
   </style>
-  <path d="M192 256H64V192H0V64h64V0h128v64h64v128h-64v64ZM448 256H320V192h-64V64h64V0h128v64h64v128h-64v64Z"/>
+  <text x="0" y="20" font-size="24">SEUN.</text>
 </svg>
