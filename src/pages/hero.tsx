@@ -4,6 +4,7 @@ import { useGSAP } from "@gsap/react";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { CVButton } from "@/components/cv-button";
 
 export const Hero = () => {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -89,13 +90,7 @@ export const Hero = () => {
                         help businesses bring ideas to life.
                     </h1>
 
-                    <Link
-                        ref={buttonRef}
-                        to="#contact"
-                        className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 rounded-full font-sans font-medium text-lg hover:bg-primary/90 transition-all hover:scale-105"
-                    >
-                        Get in touch <ArrowRight size={20} />
-                    </Link>
+                    <CVButton />
                 </div>
 
                 {/* Right Side - Description */}
