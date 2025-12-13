@@ -2,10 +2,10 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar";
-import { cn } from "../lib/utils";
 import { PROJECTS } from "@/lib/data";
 import { useNavigate } from "react-router";
+import { cn } from "@/lib/utils";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 gsap.registerPlugin(ScrollTrigger);
 

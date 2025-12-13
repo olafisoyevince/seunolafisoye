@@ -4,13 +4,13 @@ import { Hero } from "./pages/hero";
 import { About } from "./pages/about";
 import { Experiences } from "./pages/experiences";
 import { Tools } from "./pages/tools";
-import { Projects } from "./pages/projects";
 import { Blogs } from "./pages/blogs";
 import { Contact } from "./pages/contact";
 import { ThemeProvider } from "./components/theme-provider";
-import { ProjectDetails } from "./pages/project-details";
+import { ProjectDetails } from "./pages/projects/project-details";
 import { Routes, Route } from "react-router";
 import { Layout } from "./components/layout";
+import { Projects } from "./pages/projects";
 
 function App() {
     useEffect(() => {
