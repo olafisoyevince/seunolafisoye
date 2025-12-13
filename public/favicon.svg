@@ -5,6 +5,8 @@
       font-family: "Google Sans Flex", system-ui, sans-serif;
       font-weight: bold;
       letter-spacing: -2px;
+      dominant-baseline: middle;
+      text-anchor: middle;
     }
     @media (prefers-color-scheme: dark) {
       text { fill: white; }
@@ -13,5 +15,5 @@
       text { fill: black; }
     }
   </style>
-  <text x="0" y="20" font-size="24">SEUN.</text>
+  <text x="50%" y="55%" font-size="24">SEUN.</text>
 </svg>
