@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { Menu, X, Clock } from "lucide-react";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-import { CVButton } from "../components/cv-button";
 import { ThemeToggle } from "../components/theme-toggle";
 import { Logo } from "../components/logo";
 import { useLocation, useNavigate } from "react-router";
@@ -187,7 +186,6 @@ export const Navbar = () => {
                     <div className=" px-4 py-2 rounded-full text-xs font-sans border border-foreground/10 flex items-center gap-2">
                         {time} <Clock size={12} />
                     </div>
-                    <CVButton className="px-4 py-2 rounded-full text-xs font-sans border border-foreground/10 text-foreground hover:bg-foreground/5" />
                     <div className="text-foreground">
                         <ThemeToggle />
                     </div>
