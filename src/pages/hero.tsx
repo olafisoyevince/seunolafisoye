@@ -9,7 +9,6 @@ import { Linkedin } from "lucide-react";
 export const Hero = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
-  const textRef = useRef<HTMLParagraphElement>(null);
   const buttonRef = useRef<HTMLDivElement>(null);
 
   useGSAP(
@@ -31,7 +30,7 @@ export const Hero = () => {
         }
       )
         .fromTo(
-          textRef.current,
+          ".hero-text",
           {
             y: 30,
             opacity: 0,
@@ -117,10 +116,7 @@ export const Hero = () => {
 
         {/* Right Side - Description */}
         <div className="lg:col-span-4 lg:pt-4 flex flex-col gap-3.5 lg:justify-end">
-          <p
-            ref={textRef}
-            className="text-lg md:text-xl text-muted-foreground font-sans leading-relaxed max-w-md"
-          >
+          <p className="hero-text text-lg md:text-xl text-muted-foreground font-sans leading-relaxed max-w-md">
             I'm Oluwaseun Olafisoye, a{" "}
             <span className="font-semibold text-black dark:text-white">
               software engineer (frontend heavy)
@@ -133,10 +129,7 @@ export const Hero = () => {
             interfaces that blend design and technology seamlessly.
           </p>
 
-          <p
-            ref={textRef}
-            className="text-black font-sans leading-relaxed max-w-md font-semibold text-lg dark:text-white"
-          >
+          <p className="hero-text text-black font-sans leading-relaxed max-w-md font-semibold text-lg dark:text-white">
             Based in United Kingdom
           </p>
         </div>

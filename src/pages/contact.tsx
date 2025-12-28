@@ -83,13 +83,6 @@ export const Contact = () => {
         <div className="space-y-7">
           <div className="flex flex-wrap gap-4">
             <div className="contact-reveal">
-              <CVButton
-                className="bg-primary text-primary-foreground px-6 py-4 rounded-full hover:bg-primary/90"
-                text="View my CV"
-              />
-            </div>
-
-            <div className="contact-reveal">
               <Link
                 to="mailto:olafisoyevincent@gmail.com"
                 className="group inline-flex items-center gap-2 cursor-pointer transition-all duration-300 ease-out hover:scale-105 font-semibold bg-primary text-primary-foreground px-6 py-4 rounded-full hover:bg-primary/90"
@@ -97,6 +90,13 @@ export const Contact = () => {
                 Get in touch
                 <ArrowRight className="size-5 transition-transform duration-300 ease-out group-hover:translate-x-1 group-hover:-translate-y-1" />
               </Link>
+            </div>
+
+            <div className="contact-reveal">
+              <CVButton
+                className="bg-primary text-primary-foreground px-6 py-4 rounded-full hover:bg-primary/90"
+                text="View my CV"
+              />
             </div>
           </div>
 
@@ -117,6 +117,23 @@ export const Contact = () => {
             >
               <Linkedin size={40} fill="currentColor" />
             </Link>
+
+            <Link
+              to="https://x.com/fisoyeseun_"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:opacity-80"
+            >
+              <svg
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-10 h-10 fill-current"
+              >
+                <title>X (formally Twitter)</title>
+                <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+              </svg>
+            </Link>
           </div>
         </div>
       </div>
@@ -132,38 +149,6 @@ export const Contact = () => {
         </div>
 
         <div className="flex items-center gap-4">
-          <Link
-            to="https://x.com/fisoyeseun_"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary hover:opacity-80"
-          >
-            <svg
-              role="img"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-4 h-4 fill-current"
-            >
-              <title>X</title>
-              <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
-            </svg>
-          </Link>
-          <Link
-            to="https://linkedin.com/in/oluwaseun-olafisoye"
-            className="text-primary hover:opacity-80"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Linkedin size={16} fill="currentColor" />
-          </Link>
-          <Link to={"https://github.com/olafisoyevincent"}>
-            <img
-              src="https://cdn.simpleicons.org/github/181717"
-              className="object-contain w-4 h-4 fill-current dark:invert hover:opacity-80"
-              alt="GitHub"
-            />
-          </Link>
-
           <ThemeToggle />
         </div>
       </div>
