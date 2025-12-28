@@ -7,50 +7,50 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export const About = () => {
-    const containerRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
-    useGSAP(
-        () => {
-            gsap.from(".about-reveal", {
-                scrollTrigger: {
-                    trigger: containerRef.current,
-                    start: "top bottom-=100",
-                    toggleActions: "play none none reverse",
-                },
-                y: 30,
-                opacity: 0,
-                duration: 1,
-                stagger: 0.1,
-                ease: "power3.out",
-            });
+  useGSAP(
+    () => {
+      gsap.from(".about-reveal", {
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top bottom-=100",
+          toggleActions: "play none none reverse",
         },
-        { scope: containerRef }
-    );
+        y: 30,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.1,
+        ease: "power3.out",
+      });
+    },
+    { scope: containerRef }
+  );
 
-    return (
-        <section id="about" className="py-32" ref={containerRef}>
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-                {/* Left Label */}
-                <div className="lg:col-span-3">
-                    <span className="about-reveal text-sm font-sans text-muted-foreground">
-                        [01] Who I am
-                    </span>
-                </div>
+  return (
+    <section id="about" className="py-32" ref={containerRef}>
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        {/* Left Label */}
+        <div className="lg:col-span-3">
+          <span className="about-reveal text-sm font-sans text-muted-foreground">
+            [01] Who I am
+          </span>
+        </div>
 
-                {/* Right Content */}
-                <div className="lg:col-span-9">
-                    <h2 className="about-reveal text-3xl md:text-5xl lg:text-6xl font-heading font-medium leading-tight mb-16">
-                        <span className="text-muted-foreground">
-                            I'm a frontend engineer passionate about creating
-                            user-focused digital solutions.
-                        </span>{" "}
-                        <span className="text-foreground">
-                            Whether it's a bold website or a detailed app
-                            interface, I'm here to make your ideas shine.
-                        </span>
-                    </h2>
+        {/* Right Content */}
+        <div className="lg:col-span-9">
+          <h2 className="about-reveal text-3xl md:text-5xl lg:text-6xl font-heading font-medium leading-tight mb-16">
+            <span className="text-muted-foreground">
+              I'm a software engineer (frontend heavy) that builds user-focused
+              digital solutions.
+            </span>{" "}
+            <span className="text-foreground">
+              Whether it's a bold website or a detailed app interface, I'm here
+              to make your ideas shine.
+            </span>
+          </h2>
 
-                    {/* <div className="about-reveal bg-secondary text-secondary-foreground p-8 md:p-12 rounded-4xl max-w-2xl shadow-md">
+          {/* <div className="about-reveal bg-secondary text-secondary-foreground p-8 md:p-12 rounded-4xl max-w-2xl shadow-md">
                         <p className="text-lg md:text-xl font-sans leading-relaxed text-secondary-foreground/90 mb-12">
                             "Engineering is about solving problems with
                             creativity. I craft user-focused digital
@@ -84,8 +84,8 @@ export const About = () => {
                             </div>
                         </div>
                     </div> */}
-                </div>
-            </div>
-        </section>
-    );
+        </div>
+      </div>
+    </section>
+  );
 };
