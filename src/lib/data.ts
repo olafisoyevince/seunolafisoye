@@ -144,23 +144,21 @@ export const TOOLS = [
     name: "TypeScript",
     icon: "https://cdn.simpleicons.org/typescript/3178C6",
   },
+  { name: "React", icon: "https://cdn.simpleicons.org/react/61DAFB" },
+  { name: "Node.js", icon: "https://cdn.simpleicons.org/nodedotjs/339933" },
   {
     name: "JavaScript",
     icon: "https://cdn.simpleicons.org/javascript/F7DF1E",
   },
   { name: "Python", icon: "https://cdn.simpleicons.org/python/3776AB" },
   { name: "Tanstack", icon: "https://cdn.simpleicons.org/tanstack/000000" },
-  { name: "Node.js", icon: "https://cdn.simpleicons.org/nodedotjs/339933" },
-  { name: "React", icon: "https://cdn.simpleicons.org/react/61DAFB" },
   { name: "Next.js", icon: "https://cdn.simpleicons.org/nextdotjs/000000" },
   {
     name: "Tailwind CSS",
     icon: "https://cdn.simpleicons.org/tailwindcss/06B6D4",
   },
   { name: "shadcn/ui", icon: "https://cdn.simpleicons.org/shadcnui/000000" },
-  { name: "Framer", icon: "https://cdn.simpleicons.org/framer/0055FF" },
   { name: "Figma", icon: "https://cdn.simpleicons.org/figma/F24E1E" },
-  { name: "Redux", icon: "https://cdn.simpleicons.org/redux/764ABC" },
   { name: "C++", icon: "https://cdn.simpleicons.org/cplusplus/00599C" },
   {
     name: "PostgreSQL",
@@ -177,22 +175,29 @@ export const TOOLS = [
 
 export const EXPERIENCES = [
   {
-    title: "Senior Frontend Engineer",
-    company: "Turing Tower",
-    period: "April 2024 - Present",
+    title: "Fullstack & AI Engineer",
+    company: "stack8s, London, United Kingdom",
+    period: "December 2025 - Present",
     description:
-      "Directed development of enterprise and healthcare web applications, improving operational efficiency and contributing to revenue growth.",
+      "Building agentic AI workflows that enables businesses to create and deploy, cloud infrastructure (Docker & Kubernetes) and AI models for different use cases seamlessly.",
+  },
+  {
+    title: "Senior Frontend Engineer",
+    company: "Turing Tower, Lagos, Nigeria",
+    period: "April 2024 - December 2025",
+    description:
+      "Directed frontend development of an enterprise healthcare web application, used by 1000+ hospitals and clinics in Nigeria as well as a database monitoring tool for business accross Nigeria '10xing' revenue in the process.",
   },
   {
     title: "Software Engineer",
-    company: "Freelance",
+    company: "Freelance, Remote",
     period: "September 2023 - Present",
     description:
       "Built landing pages and web apps for small businesses, wrote technical articles, and taught frontend engineering to 20+ students.",
   },
   {
     title: "Information Security, Service Desk Officer",
-    company: "Septagus Consulting / Sterling Bank Plc",
+    company: "Septagus Consulting / Sterling Bank Plc, Lagos, Nigeria",
     period: "June 2023 - September 2023",
     description:
       "Supported cybersecurity research, incident response, and IT operations while contributing to security compliance.",
@@ -200,7 +205,7 @@ export const EXPERIENCES = [
 
   {
     title: "Frontend Developer",
-    company: "Zero & One Technologies Ltd",
+    company: "Zero & One Technologies Ltd, Remote",
     period: "May 2022 - June 2023",
     description:
       "Developed a large-scale election results visualization app, created reusable UI components, and mentored interns.",
