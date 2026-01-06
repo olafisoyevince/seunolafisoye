@@ -175,7 +175,7 @@ export const TOOLS = [
 
 export const EXPERIENCES = [
   {
-    title: "Fullstack & AI Engineer",
+    title: "Software Engineer - Fullstack",
     company: "stack8s, London, United Kingdom",
     period: "December 2025 - Present",
     description:
