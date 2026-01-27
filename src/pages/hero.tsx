@@ -27,7 +27,7 @@ export const Hero = () => {
           duration: 1.2,
           ease: "power3.out",
           delay: 0.2,
-        }
+        },
       )
         .fromTo(
           ".hero-text",
@@ -41,7 +41,7 @@ export const Hero = () => {
             duration: 1,
             ease: "power3.out",
           },
-          "-=0.8"
+          "-=0.8",
         )
         .fromTo(
           buttonRef.current,
@@ -55,10 +55,10 @@ export const Hero = () => {
             duration: 0.8,
             ease: "power3.out",
           },
-          "-=0.6"
+          "-=0.6",
         );
     },
-    { scope: containerRef }
+    { scope: containerRef },
   );
 
   return (
@@ -90,7 +90,7 @@ export const Hero = () => {
           </h1>
 
           <div ref={buttonRef} className="mt-8 flex items-center gap-6">
-            <Link to={"https://github.com/olafisoyevincent"}>
+            <Link to={"https://github.com/olafisoyevince"}>
               <img
                 src="https://cdn.simpleicons.org/github/181717"
                 className="object-contain w-10 h-10 fill-current dark:invert hover:opacity-80"
