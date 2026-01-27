@@ -22,7 +22,7 @@ export const Contact = () => {
         year: "numeric",
         month: "numeric",
         day: "numeric",
-      })
+      }),
     );
   }, []);
 
@@ -45,10 +45,10 @@ export const Contact = () => {
           duration: 1,
           stagger: 0.1,
           ease: "power3.out",
-        }
+        },
       );
     },
-    { scope: containerRef }
+    { scope: containerRef },
   );
 
   return (
@@ -101,7 +101,7 @@ export const Contact = () => {
           </div>
 
           <div className="contact-reveal flex gap-4">
-            <Link to={"https://github.com/olafisoyevincent"}>
+            <Link to={"https://github.com/oluwaseunolafisoye"}>
               <img
                 src="https://cdn.simpleicons.org/github/181717"
                 className="object-contain w-10 h-10 fill-current dark:invert hover:opacity-80"
