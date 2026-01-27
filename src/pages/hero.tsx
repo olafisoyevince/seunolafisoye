@@ -1,10 +1,11 @@
 import { useRef } from "react";
 import gsap from "gsap";
+import { Link } from "react-router";
+import { Linkedin } from "lucide-react";
+
 import { useGSAP } from "@gsap/react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { CVButton } from "@/components/cv-button";
-import { Link } from "react-router";
-import { Linkedin } from "lucide-react";
 
 export const Hero = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -90,7 +91,7 @@ export const Hero = () => {
           </h1>
 
           <div ref={buttonRef} className="mt-8 flex items-center gap-6">
-            <Link to={"https://github.com/olafisoyevince"}>
+            <Link to={"https://github.com/oluwaseunolafisoye"}>
               <img
                 src="https://cdn.simpleicons.org/github/181717"
                 className="object-contain w-10 h-10 fill-current dark:invert hover:opacity-80"
