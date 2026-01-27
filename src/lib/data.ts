@@ -175,16 +175,16 @@ export const TOOLS = [
 
 export const EXPERIENCES = [
   {
-    title: "Software Engineer - Fullstack",
+    title: "Software Engineer, Fullstack",
     company: "stack8s, London, United Kingdom",
-    period: "December 2025 - Present",
+    period: "January 2026 - Present",
     description:
       "Building agentic AI workflows that enables businesses to create and deploy, cloud infrastructure (Docker & Kubernetes) and AI models for different use cases seamlessly.",
   },
   {
     title: "Senior Frontend Engineer",
     company: "Turing Tower, Lagos, Nigeria",
-    period: "April 2024 - December 2025",
+    period: "April 2024 - January 2026",
     description:
       "Directed frontend development of an enterprise healthcare web application, used by 1000+ hospitals and clinics in Nigeria as well as a database monitoring tool for business accross Nigeria '10xing' revenue in the process.",
   },
